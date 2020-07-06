@@ -15,13 +15,23 @@
 
 ### 2.2 数据介绍
 
-* 图片数据集：网上搜集，训练集34000余张，测试集3800余张。
-* 文本数据集：网上搜集，训练集38000余条，测试集4000余条。
+* 图片数据集：网上搜集，训练集30000余张，测试集6800余张。
+* 文本数据集：网上搜集，训练集22000余条，测试集5000余条。
 
-### 2.3. 模型介绍
+### 2.3 模型介绍
 
 * 文本检测：基于CreateML机器学习框架中的最大熵模型。
+
+<img width="400" height="250" src="https://github.com/YangHan-Morningstar/News-Prosecutor/blob/master/News%20Prosecutor/Preview%20Content/Preview%20Assets.xcassets/TextModel.imageset/TextModel.png"/>
+
 * 图片检测：基于CreateML机器学习框架中的场景打印特征提取器及图片识别模型。
+
+<img width="400" height="250" src="https://github.com/YangHan-Morningstar/News-Prosecutor/blob/master/News%20Prosecutor/Preview%20Content/Preview%20Assets.xcassets/ImageModel.imageset/ImageModel.png"/>
+
+### 2.4 其他
+
+* 采用MVVM软件架构模式。
+* 使用CoreData数据库。
 
 ## 三、注意事项
 
