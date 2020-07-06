@@ -48,13 +48,13 @@ struct LearningView: View {
         .onTapGesture {
             self.showDetail.toggle()
         }
-//        .sheet(isPresented: $showDetail) {
-//            if self.learning.title == "如何判断新闻真假？" {
-//                Tips()
-//            } else if self.learning.title == "实战一下" {
-//                Testing(showingDetail: self.$showDetail).environmentObject(QuestionJudge())
-//            }
-//        }
+        .sheet(isPresented: $showDetail) {
+            if self.learning.title == "如何判断新闻真假？" {
+                Tips()
+            } else if self.learning.title == "实战一下" {
+                Testing(showingDetail: self.$showDetail).environmentObject(QuestionManager())
+            }
+        }
     }
 }
 

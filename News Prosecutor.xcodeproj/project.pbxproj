@@ -10,7 +10,6 @@
 		EA27B7B024B2161D007EF44F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA27B7AF24B2161D007EF44F /* AppDelegate.swift */; };
 		EA27B7B224B2161D007EF44F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA27B7B124B2161D007EF44F /* SceneDelegate.swift */; };
 		EA27B7B524B2161D007EF44F /* News_Prosecutor.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EA27B7B324B2161D007EF44F /* News_Prosecutor.xcdatamodeld */; };
-		EA27B7B724B2161D007EF44F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA27B7B624B2161D007EF44F /* ContentView.swift */; };
 		EA27B7B924B2161E007EF44F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA27B7B824B2161E007EF44F /* Assets.xcassets */; };
 		EA27B7BC24B2161E007EF44F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA27B7BB24B2161E007EF44F /* Preview Assets.xcassets */; };
 		EA27B7BF24B2161E007EF44F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA27B7BD24B2161E007EF44F /* LaunchScreen.storyboard */; };
@@ -31,6 +30,11 @@
 		EA27B7F124B2228F007EF44F /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA27B7F024B2228F007EF44F /* ImagePicker.swift */; };
 		EA27B7F324B222F2007EF44F /* TextMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA27B7F224B222F2007EF44F /* TextMethod.swift */; };
 		EA27B7F524B225B3007EF44F /* ImageMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA27B7F424B225B3007EF44F /* ImageMethod.swift */; };
+		EA27B7F724B2C47D007EF44F /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA27B7F624B2C47D007EF44F /* Question.swift */; };
+		EA27B7F924B2C67A007EF44F /* QuestionSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA27B7F824B2C67A007EF44F /* QuestionSet.swift */; };
+		EA27B7FB24B2C6C9007EF44F /* QuestionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA27B7FA24B2C6C9007EF44F /* QuestionManager.swift */; };
+		EA27B7FD24B2C709007EF44F /* AnswerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA27B7FC24B2C709007EF44F /* AnswerButton.swift */; };
+		EA27B7FF24B2C768007EF44F /* Testing.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA27B7FE24B2C768007EF44F /* Testing.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,7 +42,6 @@
 		EA27B7AF24B2161D007EF44F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EA27B7B124B2161D007EF44F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		EA27B7B424B2161D007EF44F /* News_Prosecutor.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = News_Prosecutor.xcdatamodel; sourceTree = "<group>"; };
-		EA27B7B624B2161D007EF44F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		EA27B7B824B2161E007EF44F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EA27B7BB24B2161E007EF44F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		EA27B7BE24B2161E007EF44F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -60,6 +63,11 @@
 		EA27B7F024B2228F007EF44F /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		EA27B7F224B222F2007EF44F /* TextMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextMethod.swift; sourceTree = "<group>"; };
 		EA27B7F424B225B3007EF44F /* ImageMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageMethod.swift; sourceTree = "<group>"; };
+		EA27B7F624B2C47D007EF44F /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
+		EA27B7F824B2C67A007EF44F /* QuestionSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionSet.swift; sourceTree = "<group>"; };
+		EA27B7FA24B2C6C9007EF44F /* QuestionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionManager.swift; sourceTree = "<group>"; };
+		EA27B7FC24B2C709007EF44F /* AnswerButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerButton.swift; sourceTree = "<group>"; };
+		EA27B7FE24B2C768007EF44F /* Testing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Testing.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,7 +106,6 @@
 				EA27B7C824B21882007EF44F /* Models */,
 				EA27B7C724B21871007EF44F /* DataBase */,
 				EA27B7C624B2184B007EF44F /* APP */,
-				EA27B7B624B2161D007EF44F /* ContentView.swift */,
 				EA27B7BD24B2161E007EF44F /* LaunchScreen.storyboard */,
 				EA27B7B824B2161E007EF44F /* Assets.xcassets */,
 				EA27B7C024B2161E007EF44F /* Info.plist */,
@@ -128,6 +135,7 @@
 			isa = PBXGroup;
 			children = (
 				EA27B7B324B2161D007EF44F /* News_Prosecutor.xcdatamodeld */,
+				EA27B7F824B2C67A007EF44F /* QuestionSet.swift */,
 			);
 			path = DataBase;
 			sourceTree = "<group>";
@@ -139,6 +147,7 @@
 				EA27B7DA24B21B19007EF44F /* Method.swift */,
 				EA27B7DC24B21B47007EF44F /* Modifier.swift */,
 				EA27B7DE24B21B68007EF44F /* Learning.swift */,
+				EA27B7F624B2C47D007EF44F /* Question.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -161,6 +170,7 @@
 				EA27B7E524B21CD1007EF44F /* LearningDataManager.swift */,
 				EA27B7E724B21EA7007EF44F /* ImageClassifierManager.swift */,
 				EA27B7E924B220C4007EF44F /* TextClassifierManager.swift */,
+				EA27B7FA24B2C6C9007EF44F /* QuestionManager.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -212,6 +222,8 @@
 			isa = PBXGroup;
 			children = (
 				EA27B7EE24B22218007EF44F /* Tips.swift */,
+				EA27B7FC24B2C709007EF44F /* AnswerButton.swift */,
+				EA27B7FE24B2C768007EF44F /* Testing.swift */,
 			);
 			path = Learning;
 			sourceTree = "<group>";
@@ -307,10 +319,14 @@
 				EA27B7F124B2228F007EF44F /* ImagePicker.swift in Sources */,
 				EA27B7B224B2161D007EF44F /* SceneDelegate.swift in Sources */,
 				EA27B7DD24B21B47007EF44F /* Modifier.swift in Sources */,
-				EA27B7B724B2161D007EF44F /* ContentView.swift in Sources */,
 				EA27B7E824B21EA7007EF44F /* ImageClassifierManager.swift in Sources */,
+				EA27B7FF24B2C768007EF44F /* Testing.swift in Sources */,
+				EA27B7F724B2C47D007EF44F /* Question.swift in Sources */,
 				EA27B7E224B21BBD007EF44F /* BlurView.swift in Sources */,
+				EA27B7F924B2C67A007EF44F /* QuestionSet.swift in Sources */,
+				EA27B7FB24B2C6C9007EF44F /* QuestionManager.swift in Sources */,
 				EA27B7F324B222F2007EF44F /* TextMethod.swift in Sources */,
+				EA27B7FD24B2C709007EF44F /* AnswerButton.swift in Sources */,
 				EA27B7E424B21BEB007EF44F /* MethodDataManager.swift in Sources */,
 				EA27B7EA24B220C4007EF44F /* TextClassifierManager.swift in Sources */,
 				EA27B7DF24B21B68007EF44F /* Learning.swift in Sources */,
