@@ -35,6 +35,8 @@
 		EA27B7FB24B2C6C9007EF44F /* QuestionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA27B7FA24B2C6C9007EF44F /* QuestionManager.swift */; };
 		EA27B7FD24B2C709007EF44F /* AnswerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA27B7FC24B2C709007EF44F /* AnswerButton.swift */; };
 		EA27B7FF24B2C768007EF44F /* Testing.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA27B7FE24B2C768007EF44F /* Testing.swift */; };
+		EA27B80224B30B6E007EF44F /* TextModel.png in Resources */ = {isa = PBXBuildFile; fileRef = EA27B80124B30B6E007EF44F /* TextModel.png */; };
+		EA27B80424B30B8B007EF44F /* ImageModel.png in Resources */ = {isa = PBXBuildFile; fileRef = EA27B80324B30B8B007EF44F /* ImageModel.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -68,6 +70,8 @@
 		EA27B7FA24B2C6C9007EF44F /* QuestionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionManager.swift; sourceTree = "<group>"; };
 		EA27B7FC24B2C709007EF44F /* AnswerButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerButton.swift; sourceTree = "<group>"; };
 		EA27B7FE24B2C768007EF44F /* Testing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Testing.swift; sourceTree = "<group>"; };
+		EA27B80124B30B6E007EF44F /* TextModel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = TextModel.png; path = ../../../../Pictures/TextModel.png; sourceTree = "<group>"; };
+		EA27B80324B30B8B007EF44F /* ImageModel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ImageModel.png; path = ../../../../Pictures/ImageModel.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +104,7 @@
 		EA27B7AE24B2161D007EF44F /* News Prosecutor */ = {
 			isa = PBXGroup;
 			children = (
+				EA27B80024B30B39007EF44F /* ExImages */,
 				EA27B7CB24B218BB007EF44F /* Services */,
 				EA27B7CA24B218AC007EF44F /* ViewModels */,
 				EA27B7C924B21895007EF44F /* Views */,
@@ -237,6 +242,15 @@
 			path = Method;
 			sourceTree = "<group>";
 		};
+		EA27B80024B30B39007EF44F /* ExImages */ = {
+			isa = PBXGroup;
+			children = (
+				EA27B80124B30B6E007EF44F /* TextModel.png */,
+				EA27B80324B30B8B007EF44F /* ImageModel.png */,
+			);
+			path = ExImages;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -297,6 +311,8 @@
 			files = (
 				EA27B7BF24B2161E007EF44F /* LaunchScreen.storyboard in Resources */,
 				EA27B7BC24B2161E007EF44F /* Preview Assets.xcassets in Resources */,
+				EA27B80224B30B6E007EF44F /* TextModel.png in Resources */,
+				EA27B80424B30B8B007EF44F /* ImageModel.png in Resources */,
 				EA27B7B924B2161E007EF44F /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
