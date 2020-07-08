@@ -12,7 +12,7 @@ struct AnswerButton: View {
     
     var answer: String
     
-    @EnvironmentObject var questionManager: QuestionManager
+    @EnvironmentObject var questionManager: QuestionViewModel
     @Binding var showingAlert: Bool
     
     var body: some View {

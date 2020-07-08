@@ -22,7 +22,7 @@ struct ImageMethod: View {
     @State private var show = false
     @State var showImage = false
     
-    @ObservedObject var imageClassifierManager = ImageClassifierManager()
+    @ObservedObject var imageClassifierManager = ImageViewModel()
     
     var body: some View {
         NavigationView {

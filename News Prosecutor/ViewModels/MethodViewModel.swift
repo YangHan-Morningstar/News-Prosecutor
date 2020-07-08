@@ -9,7 +9,7 @@
 import SwiftUI
 import Combine
 
-class MethodDataManager: ObservableObject {
+class MethodViewModel: ObservableObject {
     @Published var methodData: [Method] = []
     
     init() {

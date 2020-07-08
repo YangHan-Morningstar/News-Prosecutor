@@ -10,8 +10,8 @@ import SwiftUI
 
 struct HomeView: View {
     
-    @ObservedObject var methodDataManager = MethodDataManager()
-    @ObservedObject var learningDataManager = LearningDataManager()
+    @ObservedObject var methodDataManager = MethodViewModel()
+    @ObservedObject var learningDataManager = LearningViewModel()
         
     var body: some View {
         ScrollView {

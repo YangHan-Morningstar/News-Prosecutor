@@ -8,7 +8,7 @@
 
 import Foundation
 
-class QuestionManager: Identifiable, ObservableObject {
+class QuestionViewModel: Identifiable, ObservableObject {
     @Published var questionData = [Question]()
     @Published var score: Int
     @Published var sum: Int

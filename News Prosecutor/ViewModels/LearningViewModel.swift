@@ -9,7 +9,7 @@
 import SwiftUI
 import Combine
 
-class LearningDataManager: ObservableObject {
+class LearningViewModel: ObservableObject {
     @Published var learningData: [Learning] = []
     
     init() {

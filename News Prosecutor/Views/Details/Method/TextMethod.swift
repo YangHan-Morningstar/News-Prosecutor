@@ -16,7 +16,7 @@ struct TextMethod: View {
     @State private var show = false
     @State var textInput = ""
     
-    @ObservedObject var textClassifierManager = TextClassifierManager()
+    @ObservedObject var textClassifierManager = TextClassifierViewModel()
     
     var body: some View {
         ZStack(alignment: .top) {

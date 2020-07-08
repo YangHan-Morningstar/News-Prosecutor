@@ -11,7 +11,7 @@ import Combine
 import CoreML
 import Vision
 
-class ImageClassifierManager: ObservableObject {
+class ImageViewModel: ObservableObject {
     var imageModel: FakeNewsImageClassifier
     var result: [String?]
     let newsCategroy = [

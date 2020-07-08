@@ -10,7 +10,7 @@ import SwiftUI
 
 struct Testing: View {
     
-    @EnvironmentObject var questionManager: QuestionManager
+    @EnvironmentObject var questionManager: QuestionViewModel
     @State private var image: UIImage?
     @State private var showingAlert = false
     @Binding var showingDetail: Bool
