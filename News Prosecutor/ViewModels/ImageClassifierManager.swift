@@ -13,7 +13,7 @@ import Vision
 
 class ImageClassifierManager: ObservableObject {
     var imageModel: FakeNewsImageClassifier
-    var result: String?
+    var result: [String?]
     let newsCategroy = [
         "truth_pic": "真新闻",
         "rumor_pic": "假新闻"
@@ -21,21 +21,22 @@ class ImageClassifierManager: ObservableObject {
     
     init() {
         imageModel = FakeNewsImageClassifier()
+        self.result = []
     }
     
-    func classify(_ image: CIImage) -> String? {
-        // 获取模型
+    func classify(_ image: CIImage) -> [String?] {
+        
         guard let model = try? VNCoreMLModel(for: FakeNewsImageClassifier().model) else {
             fatalError("Loading CoreML Model Failed.")
         }
         
-        // 创立请求
         let request = VNCoreMLRequest(model: model){ (request, error) in
             guard let results = request.results as? [VNClassificationObservation] else {
                 fatalError("Model failed to process the image.")
             }
             if let firstResult = results.first {
-                self.result = self.newsCategroy[firstResult.identifier]
+                self.result.append(self.newsCategroy[firstResult.identifier])
+                self.result.append(String(format: "%.2f", Float(firstResult.confidence) * Float(100)))
             }
         }
         

@@ -17,7 +17,7 @@ struct ImageMethod: View {
     @State private var sourceType: UIImagePickerController.SourceType = .camera
     
     @State private var image: UIImage?
-    @State private var imageClassfyResult: String?
+    @State private var imageClassfyResult: [String?] = []
     
     @State private var show = false
     @State var showImage = false
@@ -56,7 +56,6 @@ struct ImageMethod: View {
                     Image("h")
                         .offset(x: -150, y: -200)
                         .rotationEffect(Angle(degrees: show ? 360*5 : 90))
-                        //.blendMode(.plusDarker)
                         .animation(Animation.linear(duration: 100*8))
                         .onAppear { self.show.toggle()}
                 )
@@ -97,7 +96,7 @@ struct ImageMethod: View {
                             self.showImagePicker = true
                             self.sourceType = .camera
                         },
-                        .cancel()
+                        .cancel(Text("取消"))
                         ]
                     )
                 }
@@ -126,7 +125,7 @@ struct ImageMethod: View {
                 if image == nil {
                     return Alert(title: Text("出错啦"), message: Text("您选择的图片不能为空哦"), dismissButton: .default(Text("完成")))
                 }
-                return Alert(title: Text("识别结果"), message: Text("您的输入图片中的新闻很有可能是\(imageClassfyResult!)哦"), dismissButton: .default(Text("完成"), action: {self.showImage.toggle()}))
+                return Alert(title: Text("识别结果"), message: Text("您的输入图片中的新闻有\(imageClassfyResult[1]!)%的概率是\(imageClassfyResult[0]!)哦"), dismissButton: .default(Text("完成"), action: {self.showImage.toggle()}))
             }
             
         }
