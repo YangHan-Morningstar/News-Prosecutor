@@ -12,9 +12,9 @@ struct TextMethod: View {
     
     @State private var showingAlert = false
     @State private var textContentIsEmpty = true
-    @State private var textContent = ""
     @State private var result = ""
     @State private var show = false
+    @State var textInput = ""
     
     @ObservedObject var textClassifierManager = TextClassifierManager()
     
@@ -63,27 +63,12 @@ struct TextMethod: View {
             .clipShape(RoundedRectangle(cornerRadius: 30, style: .continuous))
             .animation(.timingCurve(0.2, 0.8, 0.2, 1, duration: 0.8))
             
-            VStack {
-                HStack {
-                    TextField("请输入新闻文本", text: $textContent) {
-                        self.result = self.textClassifierManager.classify(self.textContent)!
-                        self.textContent = ""
-                    }
-                    .font(.subheadline)
-                    .padding(.trailing)
-                    .frame(height: 44)
-                    
-                    Button(action: {
-                        self.textContent = ""
-                    }) {
-                        Image(systemName: "xmark.circle.fill")
-                            .foregroundColor(Color(#colorLiteral(red: 0.6549019608, green: 0.7137254902, blue: 0.862745098, alpha: 1)))
-                            .frame(width: 44, height: 44)
-                            .clipShape(RoundedRectangle(cornerRadius: 14, style: .continuous))
-                            .padding(.trailing)
-                    }
-                }
+            CustomTextField(placeholder: "请输入新闻文本", text: $textInput) {
+                self.result = self.textClassifierManager.classify(self.textInput)!
+                self.showingAlert.toggle()
             }
+            .font(.subheadline)
+            .padding(.trailing)
             .frame(height: 44)
             .frame(maxWidth: .infinity)
             .background(BlurView(style: .systemMaterial))
@@ -91,10 +76,9 @@ struct TextMethod: View {
             .shadow(color: Color.black.opacity(0.15), radius: 20, x: 0, y: 20)
             .padding(.horizontal)
             .offset(y: 280)
-
+            
             Button(action: {
-                self.result = self.textClassifierManager.classify(self.textContent)!
-                self.textContent = ""
+                self.result = self.textClassifierManager.classify(self.textInput)!
                 self.showingAlert.toggle()
             }) {
                 Text("开始检测")
@@ -108,7 +92,7 @@ struct TextMethod: View {
             .offset(y: 350)
         }
         .alert(isPresented: $showingAlert) {
-            return Alert(title: Text("识别结果"), message: Text("您输入的新闻很有可能是\(result)哦"), dismissButton: .default(Text("完成"), action: {}))
+            return Alert(title: Text("识别结果"), message: Text("您输入的新闻很有可能是\(result)哦"), dismissButton: .default(Text("完成")))
         }
         
     }
