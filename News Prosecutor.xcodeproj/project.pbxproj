@@ -35,12 +35,12 @@
 		EA27B7FB24B2C6C9007EF44F /* QuestionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA27B7FA24B2C6C9007EF44F /* QuestionViewModel.swift */; };
 		EA27B7FD24B2C709007EF44F /* AnswerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA27B7FC24B2C709007EF44F /* AnswerButton.swift */; };
 		EA27B7FF24B2C768007EF44F /* Testing.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA27B7FE24B2C768007EF44F /* Testing.swift */; };
-		EA27B83024B56678007EF44F /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA27B82F24B56678007EF44F /* CustomTextField.swift */; };
 		EA27B85824B5C233007EF44F /* DetectResultDetailDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA27B85724B5C233007EF44F /* DetectResultDetailDataManager.swift */; };
 		EA27B85A24B5D7BD007EF44F /* DetectResultDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA27B85924B5D7BD007EF44F /* DetectResultDetailModel.swift */; };
 		EA27B85C24B5D8E1007EF44F /* DetectResultDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA27B85B24B5D8E1007EF44F /* DetectResultDetailViewModel.swift */; };
 		EA27B85F24B6EDC7007EF44F /* DetectRingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA27B85E24B6EDC7007EF44F /* DetectRingView.swift */; };
 		EA27B86124B6EDE4007EF44F /* RingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA27B86024B6EDE4007EF44F /* RingView.swift */; };
+		EA27B86324B75F36007EF44F /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA27B86224B75F36007EF44F /* CustomTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -74,12 +74,12 @@
 		EA27B7FA24B2C6C9007EF44F /* QuestionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewModel.swift; sourceTree = "<group>"; };
 		EA27B7FC24B2C709007EF44F /* AnswerButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerButton.swift; sourceTree = "<group>"; };
 		EA27B7FE24B2C768007EF44F /* Testing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Testing.swift; sourceTree = "<group>"; };
-		EA27B82F24B56678007EF44F /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		EA27B85724B5C233007EF44F /* DetectResultDetailDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetectResultDetailDataManager.swift; sourceTree = "<group>"; };
 		EA27B85924B5D7BD007EF44F /* DetectResultDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetectResultDetailModel.swift; sourceTree = "<group>"; };
 		EA27B85B24B5D8E1007EF44F /* DetectResultDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetectResultDetailViewModel.swift; sourceTree = "<group>"; };
 		EA27B85E24B6EDC7007EF44F /* DetectRingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetectRingView.swift; sourceTree = "<group>"; };
 		EA27B86024B6EDE4007EF44F /* RingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RingView.swift; sourceTree = "<group>"; };
+		EA27B86224B75F36007EF44F /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -194,8 +194,8 @@
 			isa = PBXGroup;
 			children = (
 				EA27B7F024B2228F007EF44F /* ImagePicker.swift */,
-				EA27B82F24B56678007EF44F /* CustomTextField.swift */,
 				EA27B85724B5C233007EF44F /* DetectResultDetailDataManager.swift */,
+				EA27B86224B75F36007EF44F /* CustomTextField.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -335,7 +335,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				EA27B86124B6EDE4007EF44F /* RingView.swift in Sources */,
-				EA27B83024B56678007EF44F /* CustomTextField.swift in Sources */,
 				EA27B7DB24B21B19007EF44F /* Method.swift in Sources */,
 				EA27B7E624B21CD1007EF44F /* LearningViewModel.swift in Sources */,
 				EA27B7D024B2195E007EF44F /* FakeNewsClassifier.mlmodel in Sources */,
@@ -353,6 +352,7 @@
 				EA27B7FF24B2C768007EF44F /* Testing.swift in Sources */,
 				EA27B7F724B2C47D007EF44F /* Question.swift in Sources */,
 				EA27B7E224B21BBD007EF44F /* BlurView.swift in Sources */,
+				EA27B86324B75F36007EF44F /* CustomTextField.swift in Sources */,
 				EA27B7F924B2C67A007EF44F /* QuestionSet.swift in Sources */,
 				EA27B7FB24B2C6C9007EF44F /* QuestionViewModel.swift in Sources */,
 				EA27B7F324B222F2007EF44F /* TextMethod.swift in Sources */,
