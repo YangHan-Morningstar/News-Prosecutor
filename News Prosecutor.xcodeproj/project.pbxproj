@@ -12,7 +12,6 @@
 		EA27B7B524B2161D007EF44F /* News_Prosecutor.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EA27B7B324B2161D007EF44F /* News_Prosecutor.xcdatamodeld */; };
 		EA27B7B924B2161E007EF44F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA27B7B824B2161E007EF44F /* Assets.xcassets */; };
 		EA27B7BC24B2161E007EF44F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA27B7BB24B2161E007EF44F /* Preview Assets.xcassets */; };
-		EA27B7BF24B2161E007EF44F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA27B7BD24B2161E007EF44F /* LaunchScreen.storyboard */; };
 		EA27B7D024B2195E007EF44F /* FakeNewsClassifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = EA27B7CF24B2195E007EF44F /* FakeNewsClassifier.mlmodel */; };
 		EA27B7D224B2196A007EF44F /* FakeNewsImageClassifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = EA27B7D124B2196A007EF44F /* FakeNewsImageClassifier.mlmodel */; };
 		EA27B7D424B219B0007EF44F /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA27B7D324B219B0007EF44F /* HomeView.swift */; };
@@ -36,6 +35,7 @@
 		EA27B7FD24B2C709007EF44F /* AnswerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA27B7FC24B2C709007EF44F /* AnswerButton.swift */; };
 		EA27B7FF24B2C768007EF44F /* Testing.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA27B7FE24B2C768007EF44F /* Testing.swift */; };
 		EA27B83024B56678007EF44F /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA27B82F24B56678007EF44F /* CustomTextField.swift */; };
+		EADBDA9C24B77A01009A81E8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EADBDA9A24B77A01009A81E8 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,7 +45,6 @@
 		EA27B7B424B2161D007EF44F /* News_Prosecutor.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = News_Prosecutor.xcdatamodel; sourceTree = "<group>"; };
 		EA27B7B824B2161E007EF44F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EA27B7BB24B2161E007EF44F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		EA27B7BE24B2161E007EF44F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EA27B7C024B2161E007EF44F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EA27B7CF24B2195E007EF44F /* FakeNewsClassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = FakeNewsClassifier.mlmodel; path = "../../../../../实验室/iJudger/iJudger/Models/MachineLearningModels/FakeNewsClassifier.mlmodel"; sourceTree = "<group>"; };
 		EA27B7D124B2196A007EF44F /* FakeNewsImageClassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = FakeNewsImageClassifier.mlmodel; path = "../../../../../实验室/iJudger/iJudger/Models/MachineLearningModels/FakeNewsImageClassifier.mlmodel"; sourceTree = "<group>"; };
@@ -70,6 +69,7 @@
 		EA27B7FC24B2C709007EF44F /* AnswerButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerButton.swift; sourceTree = "<group>"; };
 		EA27B7FE24B2C768007EF44F /* Testing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Testing.swift; sourceTree = "<group>"; };
 		EA27B82F24B56678007EF44F /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		EADBDA9B24B77A01009A81E8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "../../../资料/软著/iJudger/iJudger/Base.lproj/LaunchScreen.storyboard"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,8 +108,8 @@
 				EA27B7C824B21882007EF44F /* Models */,
 				EA27B7C724B21871007EF44F /* DataBase */,
 				EA27B7C624B2184B007EF44F /* APP */,
-				EA27B7BD24B2161E007EF44F /* LaunchScreen.storyboard */,
 				EA27B7B824B2161E007EF44F /* Assets.xcassets */,
+				EADBDA9A24B77A01009A81E8 /* LaunchScreen.storyboard */,
 				EA27B7C024B2161E007EF44F /* Info.plist */,
 				EA27B7BA24B2161E007EF44F /* Preview Content */,
 			);
@@ -298,7 +298,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EA27B7BF24B2161E007EF44F /* LaunchScreen.storyboard in Resources */,
+				EADBDA9C24B77A01009A81E8 /* LaunchScreen.storyboard in Resources */,
 				EA27B7BC24B2161E007EF44F /* Preview Assets.xcassets in Resources */,
 				EA27B7B924B2161E007EF44F /* Assets.xcassets in Resources */,
 			);
@@ -343,10 +343,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		EA27B7BD24B2161E007EF44F /* LaunchScreen.storyboard */ = {
+		EADBDA9A24B77A01009A81E8 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				EA27B7BE24B2161E007EF44F /* Base */,
+				EADBDA9B24B77A01009A81E8 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
