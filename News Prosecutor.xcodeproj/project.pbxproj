@@ -37,6 +37,10 @@
 		EA27B7FF24B2C768007EF44F /* Testing.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA27B7FE24B2C768007EF44F /* Testing.swift */; };
 		EA27B83024B56678007EF44F /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA27B82F24B56678007EF44F /* CustomTextField.swift */; };
 		EA27B85824B5C233007EF44F /* DetectResultDetailDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA27B85724B5C233007EF44F /* DetectResultDetailDataManager.swift */; };
+		EA27B85A24B5D7BD007EF44F /* DetectResultDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA27B85924B5D7BD007EF44F /* DetectResultDetailModel.swift */; };
+		EA27B85C24B5D8E1007EF44F /* DetectResultDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA27B85B24B5D8E1007EF44F /* DetectResultDetailViewModel.swift */; };
+		EA27B85F24B6EDC7007EF44F /* DetectRingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA27B85E24B6EDC7007EF44F /* DetectRingView.swift */; };
+		EA27B86124B6EDE4007EF44F /* RingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA27B86024B6EDE4007EF44F /* RingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -72,6 +76,10 @@
 		EA27B7FE24B2C768007EF44F /* Testing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Testing.swift; sourceTree = "<group>"; };
 		EA27B82F24B56678007EF44F /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		EA27B85724B5C233007EF44F /* DetectResultDetailDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetectResultDetailDataManager.swift; sourceTree = "<group>"; };
+		EA27B85924B5D7BD007EF44F /* DetectResultDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetectResultDetailModel.swift; sourceTree = "<group>"; };
+		EA27B85B24B5D8E1007EF44F /* DetectResultDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetectResultDetailViewModel.swift; sourceTree = "<group>"; };
+		EA27B85E24B6EDC7007EF44F /* DetectRingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetectRingView.swift; sourceTree = "<group>"; };
+		EA27B86024B6EDE4007EF44F /* RingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +160,7 @@
 				EA27B7DC24B21B47007EF44F /* Modifier.swift */,
 				EA27B7DE24B21B68007EF44F /* Learning.swift */,
 				EA27B7F624B2C47D007EF44F /* Question.swift */,
+				EA27B85924B5D7BD007EF44F /* DetectResultDetailModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -159,6 +168,7 @@
 		EA27B7C924B21895007EF44F /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				EA27B85D24B6EDB1007EF44F /* Ring */,
 				EA27B7EB24B221E6007EF44F /* Details */,
 				EA27B7E024B21B87007EF44F /* SelfBackground */,
 				EA27B7D524B219E8007EF44F /* Card */,
@@ -175,6 +185,7 @@
 				EA27B7E724B21EA7007EF44F /* ImageViewModel.swift */,
 				EA27B7E924B220C4007EF44F /* TextClassifierViewModel.swift */,
 				EA27B7FA24B2C6C9007EF44F /* QuestionViewModel.swift */,
+				EA27B85B24B5D8E1007EF44F /* DetectResultDetailViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -241,6 +252,15 @@
 				EA27B7F424B225B3007EF44F /* ImageMethod.swift */,
 			);
 			path = Method;
+			sourceTree = "<group>";
+		};
+		EA27B85D24B6EDB1007EF44F /* Ring */ = {
+			isa = PBXGroup;
+			children = (
+				EA27B85E24B6EDC7007EF44F /* DetectRingView.swift */,
+				EA27B86024B6EDE4007EF44F /* RingView.swift */,
+			);
+			path = Ring;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -314,18 +334,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA27B86124B6EDE4007EF44F /* RingView.swift in Sources */,
 				EA27B83024B56678007EF44F /* CustomTextField.swift in Sources */,
 				EA27B7DB24B21B19007EF44F /* Method.swift in Sources */,
 				EA27B7E624B21CD1007EF44F /* LearningViewModel.swift in Sources */,
 				EA27B7D024B2195E007EF44F /* FakeNewsClassifier.mlmodel in Sources */,
 				EA27B7F524B225B3007EF44F /* ImageMethod.swift in Sources */,
 				EA27B7D424B219B0007EF44F /* HomeView.swift in Sources */,
+				EA27B85C24B5D8E1007EF44F /* DetectResultDetailViewModel.swift in Sources */,
 				EA27B7D924B21A54007EF44F /* LearningView.swift in Sources */,
 				EA27B7D224B2196A007EF44F /* FakeNewsImageClassifier.mlmodel in Sources */,
 				EA27B7B024B2161D007EF44F /* AppDelegate.swift in Sources */,
 				EA27B7F124B2228F007EF44F /* ImagePicker.swift in Sources */,
 				EA27B7B224B2161D007EF44F /* SceneDelegate.swift in Sources */,
 				EA27B7DD24B21B47007EF44F /* Modifier.swift in Sources */,
+				EA27B85F24B6EDC7007EF44F /* DetectRingView.swift in Sources */,
 				EA27B7E824B21EA7007EF44F /* ImageViewModel.swift in Sources */,
 				EA27B7FF24B2C768007EF44F /* Testing.swift in Sources */,
 				EA27B7F724B2C47D007EF44F /* Question.swift in Sources */,
@@ -334,6 +357,7 @@
 				EA27B7FB24B2C6C9007EF44F /* QuestionViewModel.swift in Sources */,
 				EA27B7F324B222F2007EF44F /* TextMethod.swift in Sources */,
 				EA27B7FD24B2C709007EF44F /* AnswerButton.swift in Sources */,
+				EA27B85A24B5D7BD007EF44F /* DetectResultDetailModel.swift in Sources */,
 				EA27B7E424B21BEB007EF44F /* MethodViewModel.swift in Sources */,
 				EA27B7EA24B220C4007EF44F /* TextClassifierViewModel.swift in Sources */,
 				EA27B7DF24B21B68007EF44F /* Learning.swift in Sources */,
