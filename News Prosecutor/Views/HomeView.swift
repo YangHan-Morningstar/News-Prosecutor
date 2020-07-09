@@ -26,6 +26,20 @@ struct HomeView: View {
                 .padding(.horizontal)
                 .padding(.top)
                 .padding(.leading, 14)
+                
+                ScrollView(.horizontal, showsIndicators: false) {
+                    HStack {
+                        ForEach(methodDataManager.methodData) { item in
+                            GeometryReader { geometry in
+                                DetectRingView(method: item)
+                                    .rotation3DEffect(Angle(degrees: Double(geometry.frame(in: .global).minX - 30) / -20), axis: (x: 0, y: 10.0, z: 0))
+                            }
+                            .frame(width: 230, height: 80)
+                        }
+                    }
+                    .padding(.bottom, 20)
+                    .padding(.horizontal, 30)
+                }
                                 
                 ScrollView(.horizontal, showsIndicators: false) {
                     HStack(spacing: 20) {

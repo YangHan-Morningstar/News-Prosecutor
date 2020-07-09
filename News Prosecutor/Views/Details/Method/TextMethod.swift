@@ -17,6 +17,7 @@ struct TextMethod: View {
     @State var textInput = ""
     
     @ObservedObject var textClassifierManager = TextClassifierViewModel()
+    @ObservedObject var detectResultDetailVM = DetectResultDetailViewModel()
     
     var body: some View {
         ZStack(alignment: .top) {
@@ -64,8 +65,19 @@ struct TextMethod: View {
             .animation(.timingCurve(0.2, 0.8, 0.2, 1, duration: 0.8))
             
             CustomTextField(placeholder: "请输入新闻文本", text: $textInput) {
+                var booleanResult: Bool
+                
                 self.result = self.textClassifierManager.classify(self.textInput)!
+                
+                if self.result == "真新闻" {
+                    booleanResult = true
+                } else {
+                    booleanResult = false
+                }
+                
                 self.showingAlert.toggle()
+                
+                self.detectResultDetailVM.saveDetectResultDetail(detectResultDetail: DetectResultDetailModel(id: UUID(), methodName: "文本新闻检测", result: booleanResult))
             }
             .font(.subheadline)
             .padding(.trailing)
@@ -78,8 +90,19 @@ struct TextMethod: View {
             .offset(y: 280)
             
             Button(action: {
+                var booleanResult: Bool
+                
                 self.result = self.textClassifierManager.classify(self.textInput)!
+                
+                if self.result == "真新闻" {
+                    booleanResult = true
+                } else {
+                    booleanResult = false
+                }
+                
                 self.showingAlert.toggle()
+                
+                self.detectResultDetailVM.saveDetectResultDetail(detectResultDetail: DetectResultDetailModel(id: UUID(), methodName: "文本新闻检测", result: booleanResult))
             }) {
                 Text("开始检测")
                     .foregroundColor(.black)
