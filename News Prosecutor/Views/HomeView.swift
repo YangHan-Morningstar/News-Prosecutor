@@ -35,6 +35,10 @@ struct HomeView: View {
                             .shadow(color: Color.black.opacity(0.1), radius: 1, x: 0, y: 1)
                             .shadow(color: Color.black.opacity(0.2), radius: 10, x: 0, y: 10)
                     }
+                    .sheet(isPresented: $showDetectRingView) {
+                        DetectRingView(showDetectRing: self.$showDetectRingView)
+                            .animation(.timingCurve(0.2, 0.8, 0.2, 1, duration: 0.8))
+                    }
                 }
                 .padding(.horizontal)
                 .padding(.top)
@@ -73,10 +77,6 @@ struct HomeView: View {
                 }
                                 
                 Spacer()
-            }
-            .sheet(isPresented: $showDetectRingView) {
-                DetectRingView(showDetectRing: self.$showDetectRingView)
-                    .animation(.timingCurve(0.2, 0.8, 0.2, 1, duration: 0.8))
             }
         }
     }
