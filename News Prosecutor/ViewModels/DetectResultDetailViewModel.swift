@@ -33,7 +33,7 @@ class DetectResultDetailViewModel: ObservableObject {
         var sum = 0
         
         for detectResultDetail in detectResultDetailArray {
-            if detectResultDetail.methodName == "文本检测" {
+            if detectResultDetail.methodName == "文本新闻检测" {
                 if detectResultDetail.result {
                     trueNum += 1
                 }
@@ -46,7 +46,7 @@ class DetectResultDetailViewModel: ObservableObject {
             return 0
         }
         
-        return CGFloat(trueNum) / CGFloat(sum)
+        return (CGFloat(trueNum) / CGFloat(sum)) * CGFloat(100)
     }
     
     func getImagePercentage() -> CGFloat {
@@ -56,7 +56,7 @@ class DetectResultDetailViewModel: ObservableObject {
         var sum = 0
         
         for detectResultDetail in detectResultDetailArray {
-            if detectResultDetail.methodName == "图片检测" {
+            if detectResultDetail.methodName == "图片新闻检测" {
                 if detectResultDetail.result {
                     trueNum += 1
                 }
@@ -69,6 +69,6 @@ class DetectResultDetailViewModel: ObservableObject {
             return 0
         }
         
-        return CGFloat(trueNum) / CGFloat(sum)
+        return CGFloat(trueNum) / CGFloat(sum) * CGFloat(100)
     }
 }

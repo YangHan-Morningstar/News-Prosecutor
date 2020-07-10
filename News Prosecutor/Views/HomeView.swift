@@ -10,6 +10,8 @@ import SwiftUI
 
 struct HomeView: View {
     
+    @State var showDetectRingView = false
+    
     @ObservedObject var methodDataManager = MethodViewModel()
     @ObservedObject var learningDataManager = LearningViewModel()
         
@@ -22,24 +24,21 @@ struct HomeView: View {
                         .bold()
                     
                     Spacer()
+                    
+                    Button(action: { self.showDetectRingView.toggle() }) {
+                        Image(systemName: "clock")
+                            .renderingMode(.original)
+                            .font(.system(size: 16, weight: .medium))
+                            .frame(width: 36, height: 36)
+                            .background(Color.white)
+                            .clipShape(Circle())
+                            .shadow(color: Color.black.opacity(0.1), radius: 1, x: 0, y: 1)
+                            .shadow(color: Color.black.opacity(0.2), radius: 10, x: 0, y: 10)
+                    }
                 }
                 .padding(.horizontal)
                 .padding(.top)
                 .padding(.leading, 14)
-                
-                ScrollView(.horizontal, showsIndicators: false) {
-                    HStack {
-                        ForEach(methodDataManager.methodData) { item in
-                            GeometryReader { geometry in
-                                DetectRingView(method: item)
-                                    .rotation3DEffect(Angle(degrees: Double(geometry.frame(in: .global).minX - 30) / -20), axis: (x: 0, y: 10.0, z: 0))
-                            }
-                            .frame(width: 230, height: 80)
-                        }
-                    }
-                    .padding(.bottom, 20)
-                    .padding(.horizontal, 30)
-                }
                                 
                 ScrollView(.horizontal, showsIndicators: false) {
                     HStack(spacing: 20) {
@@ -74,7 +73,10 @@ struct HomeView: View {
                 }
                                 
                 Spacer()
-
+            }
+            .sheet(isPresented: $showDetectRingView) {
+                DetectRingView(showDetectRing: self.$showDetectRingView)
+                    .animation(.timingCurve(0.2, 0.8, 0.2, 1, duration: 0.8))
             }
         }
     }
