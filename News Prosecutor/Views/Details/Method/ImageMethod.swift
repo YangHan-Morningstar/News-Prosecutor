@@ -22,7 +22,8 @@ struct ImageMethod: View {
     @State private var show = false
     @State var showImage = false
     
-    @ObservedObject var imageClassifierManager = ImageClassifierManager()
+    @ObservedObject var imageClassifierManager = ImageViewModel()
+    @ObservedObject var detectResultDetailVM = DetectResultDetailViewModel()
     
     var body: some View {
         NavigationView {
@@ -102,12 +103,23 @@ struct ImageMethod: View {
                 }
                 
                 Button("开始检测") {
+                    var booleanResult: Bool
+                    
                     if let userPickedImage = self.image {
                         guard let ciimage = CIImage(image: userPickedImage) else {
                             fatalError("Converting UIImage to CIImage Failed.")
                         }
                         self.imageClassfyResult = self.imageClassifierManager.classify(ciimage)
                     }
+                    
+                    if self.imageClassfyResult[0]! == "真新闻" {
+                        booleanResult = true
+                    } else {
+                        booleanResult = false
+                    }
+                    
+                    self.detectResultDetailVM.saveDetectResultDetail(detectResultDetail: DetectResultDetailModel(id: UUID(), methodName: "图片新闻检测", result: booleanResult))
+                    
                     self.showingAlert.toggle()
                 }
                 .padding(12)

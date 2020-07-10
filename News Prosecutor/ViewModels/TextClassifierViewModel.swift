@@ -9,7 +9,7 @@
 import SwiftUI
 import Combine
 
-class TextClassifierManager: ObservableObject {
+class TextClassifierViewModel: ObservableObject {
     var textModel: FakeNewsClassifier
     var result: String?
     let newsCategroy = [

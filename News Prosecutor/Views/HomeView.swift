@@ -10,8 +10,10 @@ import SwiftUI
 
 struct HomeView: View {
     
-    @ObservedObject var methodDataManager = MethodDataManager()
-    @ObservedObject var learningDataManager = LearningDataManager()
+    @State var showDetectRingView = false
+    
+    @ObservedObject var methodDataManager = MethodViewModel()
+    @ObservedObject var learningDataManager = LearningViewModel()
         
     var body: some View {
         ScrollView {
@@ -22,6 +24,17 @@ struct HomeView: View {
                         .bold()
                     
                     Spacer()
+                    
+                    Button(action: { self.showDetectRingView.toggle() }) {
+                        Image(systemName: "clock")
+                            .renderingMode(.original)
+                            .font(.system(size: 16, weight: .medium))
+                            .frame(width: 36, height: 36)
+                            .background(Color.white)
+                            .clipShape(Circle())
+                            .shadow(color: Color.black.opacity(0.1), radius: 1, x: 0, y: 1)
+                            .shadow(color: Color.black.opacity(0.2), radius: 10, x: 0, y: 10)
+                    }
                 }
                 .padding(.horizontal)
                 .padding(.top)
@@ -60,7 +73,10 @@ struct HomeView: View {
                 }
                                 
                 Spacer()
-
+            }
+            .sheet(isPresented: $showDetectRingView) {
+                DetectRingView(showDetectRing: self.$showDetectRingView)
+                    .animation(.timingCurve(0.2, 0.8, 0.2, 1, duration: 0.8))
             }
         }
     }
