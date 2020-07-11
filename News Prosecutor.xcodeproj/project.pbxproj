@@ -41,6 +41,7 @@
 		EA27B86124B6EDE4007EF44F /* RingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA27B86024B6EDE4007EF44F /* RingView.swift */; };
 		EA27B86324B75F36007EF44F /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA27B86224B75F36007EF44F /* CustomTextField.swift */; };
 		EADBDA9E24B81163009A81E8 /* CharacterLimitTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = EADBDA9D24B81163009A81E8 /* CharacterLimitTextField.swift */; };
+		EADBDAA324B94C56009A81E8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EADBDAA124B94C56009A81E8 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -80,6 +81,7 @@
 		EA27B86024B6EDE4007EF44F /* RingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RingView.swift; sourceTree = "<group>"; };
 		EA27B86224B75F36007EF44F /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		EADBDA9D24B81163009A81E8 /* CharacterLimitTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterLimitTextField.swift; sourceTree = "<group>"; };
+		EADBDAA224B94C56009A81E8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "../../../竞赛/iJudger 下午4.05.09/iJudger/Base.lproj/LaunchScreen.storyboard"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,7 +121,7 @@
 				EA27B7C724B21871007EF44F /* DataBase */,
 				EA27B7C624B2184B007EF44F /* APP */,
 				EA27B7B824B2161E007EF44F /* Assets.xcassets */,
-				EADBDA9A24B77A01009A81E8 /* LaunchScreen.storyboard */,
+				EADBDAA124B94C56009A81E8 /* LaunchScreen.storyboard */,
 				EA27B7C024B2161E007EF44F /* Info.plist */,
 				EA27B7BA24B2161E007EF44F /* Preview Content */,
 			);
@@ -322,7 +324,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EADBDA9C24B77A01009A81E8 /* LaunchScreen.storyboard in Resources */,
+				EADBDAA324B94C56009A81E8 /* LaunchScreen.storyboard in Resources */,
 				EA27B7BC24B2161E007EF44F /* Preview Assets.xcassets in Resources */,
 				EA27B7B924B2161E007EF44F /* Assets.xcassets in Resources */,
 			);
@@ -373,10 +375,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		EADBDA9A24B77A01009A81E8 /* LaunchScreen.storyboard */ = {
+		EADBDAA124B94C56009A81E8 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				EADBDA9B24B77A01009A81E8 /* Base */,
+				EADBDAA224B94C56009A81E8 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
