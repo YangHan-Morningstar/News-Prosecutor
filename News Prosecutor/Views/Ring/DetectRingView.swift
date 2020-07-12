@@ -10,8 +10,6 @@ import SwiftUI
 
 struct DetectRingView: View {
     
-    var color1 = #colorLiteral(red: 0.2588235438, green: 0.7568627596, blue: 0.9686274529, alpha: 1)
-    var color2 = #colorLiteral(red: 0.2196078449, green: 0.007843137719, blue: 0.8549019694, alpha: 1)
     @Binding var showDetectRing: Bool
     
     @ObservedObject var methodVM = MethodViewModel()
@@ -26,11 +24,11 @@ struct DetectRingView: View {
                 .padding(.horizontal, 30)
             
             VStack {
-                DetectRingDetail(color1: color1, color2: color2, method: methodVM.methodData[0], showDetectRing: $showDetectRing)
+                DetectRingDetail(color1: #colorLiteral(red: 0.2588235438, green: 0.7568627596, blue: 0.9686274529, alpha: 1), color2: #colorLiteral(red: 0.2196078449, green: 0.007843137719, blue: 0.8549019694, alpha: 1), method: methodVM.methodData[0], showDetectRing: $showDetectRing)
                     .padding(.top, 30)
                     .padding(.bottom, 30)
                 
-                DetectRingDetail(color1: color1, color2: color2, method: methodVM.methodData[1], showDetectRing: $showDetectRing)
+                DetectRingDetail(color1: #colorLiteral(red: 0.9568627477, green: 0.6588235497, blue: 0.5450980663, alpha: 1), color2: #colorLiteral(red: 0.9372549057, green: 0.3490196168, blue: 0.1921568662, alpha: 1), method: methodVM.methodData[1], showDetectRing: $showDetectRing)
             }
             
             Spacer()
