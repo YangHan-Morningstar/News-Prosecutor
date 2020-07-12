@@ -50,7 +50,7 @@ struct LearningView: View {
         }
         .sheet(isPresented: $showDetail) {
             if self.learning.title == "如何判断新闻真假？" {
-                Tips()
+                Tips(showDetail: self.$showDetail)
             } else if self.learning.title == "实战一下" {
                 Testing(showingDetail: self.$showDetail).environmentObject(QuestionViewModel())
             }
