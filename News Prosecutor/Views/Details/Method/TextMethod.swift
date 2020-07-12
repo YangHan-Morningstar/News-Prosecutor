@@ -117,7 +117,9 @@ struct TextMethod: View {
         .alert(isPresented: $showingAlert) {
             return Alert(title: Text("识别结果"), message: Text("您输入的新闻很有可能是\(result)哦"), dismissButton: .default(Text("完成")))
         }
-        
+        .onTapGesture {
+            DismissKeyboardHelper.dismiss()
+        }
     }
 }
 

@@ -42,6 +42,7 @@
 		EA27B86324B75F36007EF44F /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA27B86224B75F36007EF44F /* CustomTextField.swift */; };
 		EADBDA9E24B81163009A81E8 /* CharacterLimitTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = EADBDA9D24B81163009A81E8 /* CharacterLimitTextField.swift */; };
 		EADBDAA324B94C56009A81E8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EADBDAA124B94C56009A81E8 /* LaunchScreen.storyboard */; };
+		EADBDAA924BAA18D009A81E8 /* DismissKeyboardHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EADBDAA824BAA18D009A81E8 /* DismissKeyboardHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -82,6 +83,7 @@
 		EA27B86224B75F36007EF44F /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		EADBDA9D24B81163009A81E8 /* CharacterLimitTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterLimitTextField.swift; sourceTree = "<group>"; };
 		EADBDAA224B94C56009A81E8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "../../../竞赛/iJudger 下午4.05.09/iJudger/Base.lproj/LaunchScreen.storyboard"; sourceTree = "<group>"; };
+		EADBDAA824BAA18D009A81E8 /* DismissKeyboardHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DismissKeyboardHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +116,7 @@
 		EA27B7AE24B2161D007EF44F /* News Prosecutor */ = {
 			isa = PBXGroup;
 			children = (
+				EADBDAA424BAA0A5009A81E8 /* Utils */,
 				EA27B7CB24B218BB007EF44F /* Services */,
 				EA27B7CA24B218AC007EF44F /* ViewModels */,
 				EA27B7C924B21895007EF44F /* Views */,
@@ -195,10 +198,7 @@
 		EA27B7CB24B218BB007EF44F /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				EA27B7F024B2228F007EF44F /* ImagePicker.swift */,
 				EA27B85724B5C233007EF44F /* DetectResultDetailDataManager.swift */,
-				EA27B86224B75F36007EF44F /* CustomTextField.swift */,
-				EADBDA9D24B81163009A81E8 /* CharacterLimitTextField.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -264,6 +264,41 @@
 				EA27B86024B6EDE4007EF44F /* RingView.swift */,
 			);
 			path = Ring;
+			sourceTree = "<group>";
+		};
+		EADBDAA424BAA0A5009A81E8 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				EADBDAA724BAA168009A81E8 /* KeyboardHelper */,
+				EADBDAA624BAA0DF009A81E8 /* ImageTools */,
+				EADBDAA524BAA0BA009A81E8 /* SelfTextField */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		EADBDAA524BAA0BA009A81E8 /* SelfTextField */ = {
+			isa = PBXGroup;
+			children = (
+				EA27B86224B75F36007EF44F /* CustomTextField.swift */,
+				EADBDA9D24B81163009A81E8 /* CharacterLimitTextField.swift */,
+			);
+			path = SelfTextField;
+			sourceTree = "<group>";
+		};
+		EADBDAA624BAA0DF009A81E8 /* ImageTools */ = {
+			isa = PBXGroup;
+			children = (
+				EA27B7F024B2228F007EF44F /* ImagePicker.swift */,
+			);
+			path = ImageTools;
+			sourceTree = "<group>";
+		};
+		EADBDAA724BAA168009A81E8 /* KeyboardHelper */ = {
+			isa = PBXGroup;
+			children = (
+				EADBDAA824BAA18D009A81E8 /* DismissKeyboardHelper.swift */,
+			);
+			path = KeyboardHelper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -338,6 +373,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EA27B86124B6EDE4007EF44F /* RingView.swift in Sources */,
+				EADBDAA924BAA18D009A81E8 /* DismissKeyboardHelper.swift in Sources */,
 				EA27B7DB24B21B19007EF44F /* Method.swift in Sources */,
 				EA27B7E624B21CD1007EF44F /* LearningViewModel.swift in Sources */,
 				EA27B7D024B2195E007EF44F /* FakeNewsClassifier.mlmodel in Sources */,
