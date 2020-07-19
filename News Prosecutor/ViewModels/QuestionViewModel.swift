@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import SwiftUI
 
 class QuestionViewModel: Identifiable, ObservableObject {
     @Published var questionData = [Question]()
@@ -49,5 +50,11 @@ class QuestionViewModel: Identifiable, ObservableObject {
     
     func getScore() -> String {
         return String(format: "%.2f", Float(score) * 100 / Float(sum))
+    }
+    
+    func calPercent() -> CGFloat {
+        let width = UIScreen.main.bounds.width - 66
+        
+        return width * (CGFloat(counter) / CGFloat(sum))
     }
 }

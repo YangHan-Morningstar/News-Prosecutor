@@ -38,6 +38,8 @@ struct Testing: View {
                 
                 AnswerButton(answer: "假新闻", showingAlert: $showingAlert).environmentObject(questionManager)
                 
+                CustomProgressView(percent: CGFloat(questionManager.counter) / CGFloat(questionManager.sum), width: questionManager.calPercent())
+                
             }
             .padding(.top, 30)
             .padding(.horizontal, 30)

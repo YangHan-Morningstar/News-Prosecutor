@@ -43,6 +43,7 @@
 		EADBDA9E24B81163009A81E8 /* CharacterLimitTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = EADBDA9D24B81163009A81E8 /* CharacterLimitTextField.swift */; };
 		EADBDAA324B94C56009A81E8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EADBDAA124B94C56009A81E8 /* LaunchScreen.storyboard */; };
 		EADBDAA924BAA18D009A81E8 /* DismissKeyboardHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EADBDAA824BAA18D009A81E8 /* DismissKeyboardHelper.swift */; };
+		EAE0E5D324C493810021629B /* CustomProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE0E5D224C493810021629B /* CustomProgressView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -84,6 +85,7 @@
 		EADBDA9D24B81163009A81E8 /* CharacterLimitTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterLimitTextField.swift; sourceTree = "<group>"; };
 		EADBDAA224B94C56009A81E8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "../../../竞赛/iJudger 下午4.05.09/iJudger/Base.lproj/LaunchScreen.storyboard"; sourceTree = "<group>"; };
 		EADBDAA824BAA18D009A81E8 /* DismissKeyboardHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DismissKeyboardHelper.swift; sourceTree = "<group>"; };
+		EAE0E5D224C493810021629B /* CustomProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomProgressView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,6 +175,7 @@
 		EA27B7C924B21895007EF44F /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				EAE0E5D124C493630021629B /* Progress */,
 				EA27B85D24B6EDB1007EF44F /* Ring */,
 				EA27B7EB24B221E6007EF44F /* Details */,
 				EA27B7E024B21B87007EF44F /* SelfBackground */,
@@ -301,6 +304,14 @@
 			path = KeyboardHelper;
 			sourceTree = "<group>";
 		};
+		EAE0E5D124C493630021629B /* Progress */ = {
+			isa = PBXGroup;
+			children = (
+				EAE0E5D224C493810021629B /* CustomProgressView.swift */,
+			);
+			path = Progress;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -396,6 +407,7 @@
 				EA27B7F924B2C67A007EF44F /* QuestionSet.swift in Sources */,
 				EA27B7FB24B2C6C9007EF44F /* QuestionViewModel.swift in Sources */,
 				EA27B7F324B222F2007EF44F /* TextMethod.swift in Sources */,
+				EAE0E5D324C493810021629B /* CustomProgressView.swift in Sources */,
 				EA27B7FD24B2C709007EF44F /* AnswerButton.swift in Sources */,
 				EA27B85A24B5D7BD007EF44F /* DetectResultDetailModel.swift in Sources */,
 				EA27B7E424B21BEB007EF44F /* MethodViewModel.swift in Sources */,
