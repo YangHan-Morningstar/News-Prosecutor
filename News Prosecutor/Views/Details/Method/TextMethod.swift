@@ -67,17 +67,19 @@ struct TextMethod: View {
             CustomTextField(placeholder: "请输入新闻文本", text: $textInput) {
                 var booleanResult: Bool
                 
-                self.result = self.textClassifierManager.classify(self.textInput)!
-                
-                if self.result == "真新闻" {
-                    booleanResult = true
-                } else {
-                    booleanResult = false
+                if self.textInput != "" {
+                    self.result = self.textClassifierManager.classify(self.textInput)!
+                    
+                    if self.result == "真新闻" {
+                        booleanResult = true
+                    } else {
+                        booleanResult = false
+                    }
+                    
+                    self.detectResultDetailVM.saveDetectResultDetail(detectResultDetail: DetectResultDetailModel(id: UUID(), methodName: "文本新闻检测", result: booleanResult))
                 }
                 
                 self.showingAlert.toggle()
-                
-                self.detectResultDetailVM.saveDetectResultDetail(detectResultDetail: DetectResultDetailModel(id: UUID(), methodName: "文本新闻检测", result: booleanResult))
             }
             .font(.subheadline)
             .padding(.trailing)
@@ -92,17 +94,19 @@ struct TextMethod: View {
             Button(action: {
                 var booleanResult: Bool
                 
-                self.result = self.textClassifierManager.classify(self.textInput)!
-                
-                if self.result == "真新闻" {
-                    booleanResult = true
-                } else {
-                    booleanResult = false
+                if self.textInput != "" {
+                    self.result = self.textClassifierManager.classify(self.textInput)!
+                    
+                    if self.result == "真新闻" {
+                        booleanResult = true
+                    } else {
+                        booleanResult = false
+                    }
+                    
+                    self.detectResultDetailVM.saveDetectResultDetail(detectResultDetail: DetectResultDetailModel(id: UUID(), methodName: "文本新闻检测", result: booleanResult))
                 }
                 
                 self.showingAlert.toggle()
-                
-                self.detectResultDetailVM.saveDetectResultDetail(detectResultDetail: DetectResultDetailModel(id: UUID(), methodName: "文本新闻检测", result: booleanResult))
             }) {
                 Text("开始检测")
                     .foregroundColor(.black)
@@ -115,7 +119,15 @@ struct TextMethod: View {
             .offset(y: 350)
         }
         .alert(isPresented: $showingAlert) {
-            return Alert(title: Text("识别结果"), message: Text("您输入的新闻很有可能是\(result)哦"), dismissButton: .default(Text("完成")))
+            var alert: Alert
+            
+            if self.result == "" {
+                alert = Alert(title: Text("出错啦"), message: Text("您输入的新闻文本不能为空哦"), dismissButton: .default(Text("完成"), action: {self.result = ""}))
+            } else {
+                alert = Alert(title: Text("检测结果"), message: Text("您输入的新闻很有可能是\(result)哦"), dismissButton: .default(Text("完成"), action: {self.result = ""}))
+            }
+            
+            return alert
         }
         .onTapGesture {
             DismissKeyboardHelper.dismiss()

@@ -109,16 +109,17 @@ struct ImageMethod: View {
                         guard let ciimage = CIImage(image: userPickedImage) else {
                             fatalError("Converting UIImage to CIImage Failed.")
                         }
+                        
                         self.imageClassfyResult = self.imageClassifierManager.classify(ciimage)
+                        
+                        if self.imageClassfyResult[0]! == "真新闻" {
+                            booleanResult = true
+                        } else {
+                            booleanResult = false
+                        }
+                        
+                        self.detectResultDetailVM.saveDetectResultDetail(detectResultDetail: DetectResultDetailModel(id: UUID(), methodName: "图片新闻检测", result: booleanResult))
                     }
-                    
-                    if self.imageClassfyResult[0]! == "真新闻" {
-                        booleanResult = true
-                    } else {
-                        booleanResult = false
-                    }
-                    
-                    self.detectResultDetailVM.saveDetectResultDetail(detectResultDetail: DetectResultDetailModel(id: UUID(), methodName: "图片新闻检测", result: booleanResult))
                     
                     self.showingAlert.toggle()
                 }
@@ -134,13 +135,20 @@ struct ImageMethod: View {
             .navigationBarTitle("Camera")
             .navigationBarHidden(true)
             .alert(isPresented: $showingAlert) {
+                var alert: Alert
+                
                 if image == nil {
-                    return Alert(title: Text("出错啦"), message: Text("您选择的图片不能为空哦"), dismissButton: .default(Text("完成")))
+                    alert = Alert(title: Text("出错啦"), message: Text("您选择的图片不能为空哦"), dismissButton: .default(Text("完成")))
+                } else {
+                    alert = Alert(title: Text("识别结果"), message: Text("您的输入图片中的新闻有\(imageClassfyResult[1]!)%的概率是\(imageClassfyResult[0]!)哦"), dismissButton: .default(Text("完成"), action: {
+                        self.showImage.toggle()
+                        self.imageClassifierManager.result = []
+                        self.imageClassfyResult = []
+                        self.image = nil
+                    }))
                 }
-                return Alert(title: Text("识别结果"), message: Text("您的输入图片中的新闻有\(imageClassfyResult[1]!)%的概率是\(imageClassfyResult[0]!)哦"), dismissButton: .default(Text("完成"), action: {
-                    self.showImage.toggle()
-                    self.imageClassifierManager.result = []
-                }))
+                
+                return alert
             }
             
         }
