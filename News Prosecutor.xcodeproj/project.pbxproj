@@ -43,6 +43,7 @@
 		EADBDA9E24B81163009A81E8 /* CharacterLimitTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = EADBDA9D24B81163009A81E8 /* CharacterLimitTextField.swift */; };
 		EADBDAA324B94C56009A81E8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EADBDAA124B94C56009A81E8 /* LaunchScreen.storyboard */; };
 		EADBDAA924BAA18D009A81E8 /* DismissKeyboardHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EADBDAA824BAA18D009A81E8 /* DismissKeyboardHelper.swift */; };
+		EAE0E5D024C3F8E40021629B /* ResizableTextFieldHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE0E5CF24C3F8E40021629B /* ResizableTextFieldHomeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -84,6 +85,7 @@
 		EADBDA9D24B81163009A81E8 /* CharacterLimitTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterLimitTextField.swift; sourceTree = "<group>"; };
 		EADBDAA224B94C56009A81E8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "../../../竞赛/iJudger 下午4.05.09/iJudger/Base.lproj/LaunchScreen.storyboard"; sourceTree = "<group>"; };
 		EADBDAA824BAA18D009A81E8 /* DismissKeyboardHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DismissKeyboardHelper.swift; sourceTree = "<group>"; };
+		EAE0E5CF24C3F8E40021629B /* ResizableTextFieldHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResizableTextFieldHomeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -281,6 +283,7 @@
 			children = (
 				EA27B86224B75F36007EF44F /* CustomTextField.swift */,
 				EADBDA9D24B81163009A81E8 /* CharacterLimitTextField.swift */,
+				EAE0E5CF24C3F8E40021629B /* ResizableTextFieldHomeView.swift */,
 			);
 			path = SelfTextField;
 			sourceTree = "<group>";
@@ -405,6 +408,7 @@
 				EA27B85824B5C233007EF44F /* DetectResultDetailDataManager.swift in Sources */,
 				EA27B7D724B219FF007EF44F /* MethodView.swift in Sources */,
 				EA27B7EF24B22218007EF44F /* Tips.swift in Sources */,
+				EAE0E5D024C3F8E40021629B /* ResizableTextFieldHomeView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
