@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -44,6 +44,10 @@
 		EADBDAA324B94C56009A81E8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EADBDAA124B94C56009A81E8 /* LaunchScreen.storyboard */; };
 		EADBDAA924BAA18D009A81E8 /* DismissKeyboardHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EADBDAA824BAA18D009A81E8 /* DismissKeyboardHelper.swift */; };
 		EAE0E5D324C493810021629B /* CustomProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE0E5D224C493810021629B /* CustomProgressView.swift */; };
+		EAE0E5D624C4A98C0021629B /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = EAE0E5D524C4A98C0021629B /* Lottie */; };
+		EAE0E5DB24C515C80021629B /* 14651-error-animation.json in Resources */ = {isa = PBXBuildFile; fileRef = EAE0E5D924C515C80021629B /* 14651-error-animation.json */; };
+		EAE0E5DC24C515C80021629B /* 433-checked-done.json in Resources */ = {isa = PBXBuildFile; fileRef = EAE0E5DA24C515C80021629B /* 433-checked-done.json */; };
+		EAE0E5DF24C5165C0021629B /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE0E5DE24C5165C0021629B /* LottieView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -86,6 +90,9 @@
 		EADBDAA224B94C56009A81E8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "../../../竞赛/iJudger 下午4.05.09/iJudger/Base.lproj/LaunchScreen.storyboard"; sourceTree = "<group>"; };
 		EADBDAA824BAA18D009A81E8 /* DismissKeyboardHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DismissKeyboardHelper.swift; sourceTree = "<group>"; };
 		EAE0E5D224C493810021629B /* CustomProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomProgressView.swift; sourceTree = "<group>"; };
+		EAE0E5D924C515C80021629B /* 14651-error-animation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "14651-error-animation.json"; sourceTree = "<group>"; };
+		EAE0E5DA24C515C80021629B /* 433-checked-done.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "433-checked-done.json"; sourceTree = "<group>"; };
+		EAE0E5DE24C5165C0021629B /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +100,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EAE0E5D624C4A98C0021629B /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -153,6 +161,7 @@
 		EA27B7C724B21871007EF44F /* DataBase */ = {
 			isa = PBXGroup;
 			children = (
+				EAE0E5D724C515AE0021629B /* Animation */,
 				EA27B7B324B2161D007EF44F /* News_Prosecutor.xcdatamodeld */,
 				EA27B7F824B2C67A007EF44F /* QuestionSet.swift */,
 			);
@@ -175,6 +184,7 @@
 		EA27B7C924B21895007EF44F /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				EAE0E5DD24C5163C0021629B /* Animation */,
 				EAE0E5D124C493630021629B /* Progress */,
 				EA27B85D24B6EDB1007EF44F /* Ring */,
 				EA27B7EB24B221E6007EF44F /* Details */,
@@ -312,6 +322,31 @@
 			path = Progress;
 			sourceTree = "<group>";
 		};
+		EAE0E5D724C515AE0021629B /* Animation */ = {
+			isa = PBXGroup;
+			children = (
+				EAE0E5D824C515C80021629B /* Lottie */,
+			);
+			path = Animation;
+			sourceTree = "<group>";
+		};
+		EAE0E5D824C515C80021629B /* Lottie */ = {
+			isa = PBXGroup;
+			children = (
+				EAE0E5D924C515C80021629B /* 14651-error-animation.json */,
+				EAE0E5DA24C515C80021629B /* 433-checked-done.json */,
+			);
+			path = Lottie;
+			sourceTree = "<group>";
+		};
+		EAE0E5DD24C5163C0021629B /* Animation */ = {
+			isa = PBXGroup;
+			children = (
+				EAE0E5DE24C5165C0021629B /* LottieView.swift */,
+			);
+			path = Animation;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -328,6 +363,9 @@
 			dependencies = (
 			);
 			name = "News Prosecutor";
+			packageProductDependencies = (
+				EAE0E5D524C4A98C0021629B /* Lottie */,
+			);
 			productName = "News Prosecutor";
 			productReference = EA27B7AC24B2161D007EF44F /* News Prosecutor.app */;
 			productType = "com.apple.product-type.application";
@@ -356,6 +394,9 @@
 				Base,
 			);
 			mainGroup = EA27B7A324B2161D007EF44F;
+			packageReferences = (
+				EAE0E5D424C4A98C0021629B /* XCRemoteSwiftPackageReference "lottie-ios" */,
+			);
 			productRefGroup = EA27B7AD24B2161D007EF44F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -373,6 +414,8 @@
 				EADBDAA324B94C56009A81E8 /* LaunchScreen.storyboard in Resources */,
 				EA27B7BC24B2161E007EF44F /* Preview Assets.xcassets in Resources */,
 				EA27B7B924B2161E007EF44F /* Assets.xcassets in Resources */,
+				EAE0E5DB24C515C80021629B /* 14651-error-animation.json in Resources */,
+				EAE0E5DC24C515C80021629B /* 433-checked-done.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -415,6 +458,7 @@
 				EA27B7DF24B21B68007EF44F /* Learning.swift in Sources */,
 				EA27B7B524B2161D007EF44F /* News_Prosecutor.xcdatamodeld in Sources */,
 				EA27B85824B5C233007EF44F /* DetectResultDetailDataManager.swift in Sources */,
+				EAE0E5DF24C5165C0021629B /* LottieView.swift in Sources */,
 				EA27B7D724B219FF007EF44F /* MethodView.swift in Sources */,
 				EA27B7EF24B22218007EF44F /* Tips.swift in Sources */,
 			);
@@ -467,6 +511,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -527,6 +572,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -610,6 +656,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		EAE0E5D424C4A98C0021629B /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-ios.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.1.8;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		EAE0E5D524C4A98C0021629B /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EAE0E5D424C4A98C0021629B /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		EA27B7B324B2161D007EF44F /* News_Prosecutor.xcdatamodeld */ = {

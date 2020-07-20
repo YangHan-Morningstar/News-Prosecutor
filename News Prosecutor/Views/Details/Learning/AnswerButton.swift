@@ -14,20 +14,31 @@ struct AnswerButton: View {
     
     @EnvironmentObject var questionManager: QuestionViewModel
     @Binding var showingAlert: Bool
+    @Binding var isAnswerRight: Bool
+    @Binding var showingLottieAnimation: Bool
     
     var body: some View {
         Button(answer) {
             if self.questionManager.questionData[self.questionManager.counter].answer == self.answer {
-                if self.questionManager.counter + 1 == self.questionManager.sum {
-                    self.showingAlert.toggle()
-                } else {
-                    self.questionManager.count(ifTrue: true)
-                }
+                self.isAnswerRight = true
+                
+                self.questionManager.count(ifTrue: true)
+                
+                self.showingLottieAnimation.toggle()
+                
             } else {
-                if self.questionManager.counter + 1 == self.questionManager.sum {
+                self.isAnswerRight = false
+                
+                self.questionManager.count(ifTrue: false)
+                
+                self.showingLottieAnimation.toggle()
+            }
+            
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                self.showingLottieAnimation.toggle()
+                
+                if self.questionManager.counter == self.questionManager.sum {
                     self.showingAlert.toggle()
-                } else {
-                    self.questionManager.count(ifTrue: false)
                 }
             }
         }
