@@ -184,7 +184,6 @@
 		EA27B7C924B21895007EF44F /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				EAE0E5DD24C5163C0021629B /* Animation */,
 				EAE0E5D124C493630021629B /* Progress */,
 				EA27B85D24B6EDB1007EF44F /* Ring */,
 				EA27B7EB24B221E6007EF44F /* Details */,
@@ -198,12 +197,9 @@
 		EA27B7CA24B218AC007EF44F /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				EA27B7E324B21BEB007EF44F /* MethodViewModel.swift */,
-				EA27B7E524B21CD1007EF44F /* LearningViewModel.swift */,
-				EA27B7E724B21EA7007EF44F /* ImageViewModel.swift */,
-				EA27B7E924B220C4007EF44F /* TextClassifierViewModel.swift */,
-				EA27B7FA24B2C6C9007EF44F /* QuestionViewModel.swift */,
-				EA27B85B24B5D8E1007EF44F /* DetectResultDetailViewModel.swift */,
+				EAE0E60224C7311B0021629B /* DetailViewModels */,
+				EAE0E60124C730EB0021629B /* TestQuestionViewModel */,
+				EAE0E60024C730830021629B /* DetectViewModels */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -282,6 +278,7 @@
 		EADBDAA424BAA0A5009A81E8 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				EAE0E5DD24C5163C0021629B /* Animation */,
 				EADBDAA724BAA168009A81E8 /* KeyboardHelper */,
 				EADBDAA624BAA0DF009A81E8 /* ImageTools */,
 				EADBDAA524BAA0BA009A81E8 /* SelfTextField */,
@@ -345,6 +342,33 @@
 				EAE0E5DE24C5165C0021629B /* LottieView.swift */,
 			);
 			path = Animation;
+			sourceTree = "<group>";
+		};
+		EAE0E60024C730830021629B /* DetectViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				EA27B85B24B5D8E1007EF44F /* DetectResultDetailViewModel.swift */,
+				EA27B7E724B21EA7007EF44F /* ImageViewModel.swift */,
+				EA27B7E924B220C4007EF44F /* TextClassifierViewModel.swift */,
+			);
+			path = DetectViewModels;
+			sourceTree = "<group>";
+		};
+		EAE0E60124C730EB0021629B /* TestQuestionViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				EA27B7FA24B2C6C9007EF44F /* QuestionViewModel.swift */,
+			);
+			path = TestQuestionViewModel;
+			sourceTree = "<group>";
+		};
+		EAE0E60224C7311B0021629B /* DetailViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				EA27B7E324B21BEB007EF44F /* MethodViewModel.swift */,
+				EA27B7E524B21CD1007EF44F /* LearningViewModel.swift */,
+			);
+			path = DetailViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
