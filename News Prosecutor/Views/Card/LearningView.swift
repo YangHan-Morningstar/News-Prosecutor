@@ -30,6 +30,7 @@ struct LearningView: View {
             HStack {
                 Text(learning.text)
                     .frame(maxWidth: 200, alignment: .leading)
+                    .foregroundColor(Color.black)
                 
                 Spacer()
             }

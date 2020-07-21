@@ -32,6 +32,7 @@ struct MethodView: View {
                                     
                 Text(method.text)
                     .frame(maxWidth: .infinity, alignment: .leading)
+                    .foregroundColor(Color.black)
             }
             .padding()
             .padding(.top)
