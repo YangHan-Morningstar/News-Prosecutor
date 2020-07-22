@@ -13,7 +13,6 @@
 		EA27B7B924B2161E007EF44F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA27B7B824B2161E007EF44F /* Assets.xcassets */; };
 		EA27B7BC24B2161E007EF44F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA27B7BB24B2161E007EF44F /* Preview Assets.xcassets */; };
 		EA27B7D024B2195E007EF44F /* FakeNewsClassifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = EA27B7CF24B2195E007EF44F /* FakeNewsClassifier.mlmodel */; };
-		EA27B7D224B2196A007EF44F /* FakeNewsImageClassifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = EA27B7D124B2196A007EF44F /* FakeNewsImageClassifier.mlmodel */; };
 		EA27B7D424B219B0007EF44F /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA27B7D324B219B0007EF44F /* HomeView.swift */; };
 		EA27B7D724B219FF007EF44F /* MethodView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA27B7D624B219FF007EF44F /* MethodView.swift */; };
 		EA27B7D924B21A54007EF44F /* LearningView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA27B7D824B21A54007EF44F /* LearningView.swift */; };
@@ -48,6 +47,7 @@
 		EAE0E5DB24C515C80021629B /* 14651-error-animation.json in Resources */ = {isa = PBXBuildFile; fileRef = EAE0E5D924C515C80021629B /* 14651-error-animation.json */; };
 		EAE0E5DC24C515C80021629B /* 433-checked-done.json in Resources */ = {isa = PBXBuildFile; fileRef = EAE0E5DA24C515C80021629B /* 433-checked-done.json */; };
 		EAE0E5DF24C5165C0021629B /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE0E5DE24C5165C0021629B /* LottieView.swift */; };
+		EAE0E60424C7D7030021629B /* FakeNewsImageClassifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = EAE0E60324C7D7030021629B /* FakeNewsImageClassifier.mlmodel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,7 +59,6 @@
 		EA27B7BB24B2161E007EF44F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		EA27B7C024B2161E007EF44F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EA27B7CF24B2195E007EF44F /* FakeNewsClassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = FakeNewsClassifier.mlmodel; path = "../../../../../实验室/iJudger/iJudger/Models/MachineLearningModels/FakeNewsClassifier.mlmodel"; sourceTree = "<group>"; };
-		EA27B7D124B2196A007EF44F /* FakeNewsImageClassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = FakeNewsImageClassifier.mlmodel; path = "../../../../../实验室/iJudger/iJudger/Models/MachineLearningModels/FakeNewsImageClassifier.mlmodel"; sourceTree = "<group>"; };
 		EA27B7D324B219B0007EF44F /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		EA27B7D624B219FF007EF44F /* MethodView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MethodView.swift; sourceTree = "<group>"; };
 		EA27B7D824B21A54007EF44F /* LearningView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearningView.swift; sourceTree = "<group>"; };
@@ -93,6 +92,7 @@
 		EAE0E5D924C515C80021629B /* 14651-error-animation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "14651-error-animation.json"; sourceTree = "<group>"; };
 		EAE0E5DA24C515C80021629B /* 433-checked-done.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "433-checked-done.json"; sourceTree = "<group>"; };
 		EAE0E5DE24C5165C0021629B /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
+		EAE0E60324C7D7030021629B /* FakeNewsImageClassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = FakeNewsImageClassifier.mlmodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -216,7 +216,7 @@
 			isa = PBXGroup;
 			children = (
 				EA27B7CF24B2195E007EF44F /* FakeNewsClassifier.mlmodel */,
-				EA27B7D124B2196A007EF44F /* FakeNewsImageClassifier.mlmodel */,
+				EAE0E60324C7D7030021629B /* FakeNewsImageClassifier.mlmodel */,
 			);
 			path = MachineLearningModel;
 			sourceTree = "<group>";
@@ -459,7 +459,7 @@
 				EA27B7D424B219B0007EF44F /* HomeView.swift in Sources */,
 				EA27B85C24B5D8E1007EF44F /* DetectResultDetailViewModel.swift in Sources */,
 				EA27B7D924B21A54007EF44F /* LearningView.swift in Sources */,
-				EA27B7D224B2196A007EF44F /* FakeNewsImageClassifier.mlmodel in Sources */,
+				EAE0E60424C7D7030021629B /* FakeNewsImageClassifier.mlmodel in Sources */,
 				EA27B7B024B2161D007EF44F /* AppDelegate.swift in Sources */,
 				EA27B7F124B2228F007EF44F /* ImagePicker.swift in Sources */,
 				EA27B7B224B2161D007EF44F /* SceneDelegate.swift in Sources */,
