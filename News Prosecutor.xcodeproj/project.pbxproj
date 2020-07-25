@@ -48,6 +48,12 @@
 		EAE0E5DC24C515C80021629B /* 433-checked-done.json in Resources */ = {isa = PBXBuildFile; fileRef = EAE0E5DA24C515C80021629B /* 433-checked-done.json */; };
 		EAE0E5DF24C5165C0021629B /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE0E5DE24C5165C0021629B /* LottieView.swift */; };
 		EAE0E60424C7D7030021629B /* FakeNewsImageClassifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = EAE0E60324C7D7030021629B /* FakeNewsImageClassifier.mlmodel */; };
+		EAE0E67B24CBD5C10021629B /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE0E67A24CBD5C10021629B /* WebView.swift */; };
+		EAE0E67D24CBD6B60021629B /* WebURLDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE0E67C24CBD6B60021629B /* WebURLDetailView.swift */; };
+		EAE0E67F24CBD6DA0021629B /* WebURLView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE0E67E24CBD6DA0021629B /* WebURLView.swift */; };
+		EAE0E68124CBD7A00021629B /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE0E68024CBD7A00021629B /* TabBarView.swift */; };
+		EAE0E68524CBD96A0021629B /* CasesList.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE0E68424CBD96A0021629B /* CasesList.swift */; };
+		EAE0E68724CBD9F60021629B /* CasesTitles.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE0E68624CBD9F60021629B /* CasesTitles.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -93,6 +99,12 @@
 		EAE0E5DA24C515C80021629B /* 433-checked-done.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "433-checked-done.json"; sourceTree = "<group>"; };
 		EAE0E5DE24C5165C0021629B /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
 		EAE0E60324C7D7030021629B /* FakeNewsImageClassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = FakeNewsImageClassifier.mlmodel; sourceTree = "<group>"; };
+		EAE0E67A24CBD5C10021629B /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
+		EAE0E67C24CBD6B60021629B /* WebURLDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebURLDetailView.swift; sourceTree = "<group>"; };
+		EAE0E67E24CBD6DA0021629B /* WebURLView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebURLView.swift; sourceTree = "<group>"; };
+		EAE0E68024CBD7A00021629B /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
+		EAE0E68424CBD96A0021629B /* CasesList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CasesList.swift; sourceTree = "<group>"; };
+		EAE0E68624CBD9F60021629B /* CasesTitles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CasesTitles.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -184,12 +196,15 @@
 		EA27B7C924B21895007EF44F /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				EAE0E68224CBD8790021629B /* CasesClassification */,
+				EAE0E67924CBD5A20021629B /* Web */,
 				EAE0E5D124C493630021629B /* Progress */,
 				EA27B85D24B6EDB1007EF44F /* Ring */,
 				EA27B7EB24B221E6007EF44F /* Details */,
 				EA27B7E024B21B87007EF44F /* SelfBackground */,
 				EA27B7D524B219E8007EF44F /* Card */,
 				EA27B7D324B219B0007EF44F /* HomeView.swift */,
+				EAE0E68024CBD7A00021629B /* TabBarView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -226,6 +241,7 @@
 			children = (
 				EA27B7D624B219FF007EF44F /* MethodView.swift */,
 				EA27B7D824B21A54007EF44F /* LearningView.swift */,
+				EAE0E68424CBD96A0021629B /* CasesList.swift */,
 			);
 			path = Card;
 			sourceTree = "<group>";
@@ -241,6 +257,7 @@
 		EA27B7EB24B221E6007EF44F /* Details */ = {
 			isa = PBXGroup;
 			children = (
+				EAE0E68324CBD8E90021629B /* Cases */,
 				EA27B7ED24B221F8007EF44F /* Method */,
 				EA27B7EC24B221F2007EF44F /* Learning */,
 			);
@@ -371,6 +388,31 @@
 			path = DetailViewModels;
 			sourceTree = "<group>";
 		};
+		EAE0E67924CBD5A20021629B /* Web */ = {
+			isa = PBXGroup;
+			children = (
+				EAE0E67A24CBD5C10021629B /* WebView.swift */,
+				EAE0E67C24CBD6B60021629B /* WebURLDetailView.swift */,
+				EAE0E67E24CBD6DA0021629B /* WebURLView.swift */,
+			);
+			path = Web;
+			sourceTree = "<group>";
+		};
+		EAE0E68224CBD8790021629B /* CasesClassification */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CasesClassification;
+			sourceTree = "<group>";
+		};
+		EAE0E68324CBD8E90021629B /* Cases */ = {
+			isa = PBXGroup;
+			children = (
+				EAE0E68624CBD9F60021629B /* CasesTitles.swift */,
+			);
+			path = Cases;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -453,7 +495,9 @@
 				EA27B86124B6EDE4007EF44F /* RingView.swift in Sources */,
 				EADBDAA924BAA18D009A81E8 /* DismissKeyboardHelper.swift in Sources */,
 				EA27B7DB24B21B19007EF44F /* Method.swift in Sources */,
+				EAE0E67F24CBD6DA0021629B /* WebURLView.swift in Sources */,
 				EA27B7E624B21CD1007EF44F /* LearningViewModel.swift in Sources */,
+				EAE0E68524CBD96A0021629B /* CasesList.swift in Sources */,
 				EA27B7D024B2195E007EF44F /* FakeNewsClassifier.mlmodel in Sources */,
 				EA27B7F524B225B3007EF44F /* ImageMethod.swift in Sources */,
 				EA27B7D424B219B0007EF44F /* HomeView.swift in Sources */,
@@ -467,10 +511,13 @@
 				EADBDA9E24B81163009A81E8 /* CharacterLimitTextField.swift in Sources */,
 				EA27B85F24B6EDC7007EF44F /* DetectRingView.swift in Sources */,
 				EA27B7E824B21EA7007EF44F /* ImageViewModel.swift in Sources */,
+				EAE0E67D24CBD6B60021629B /* WebURLDetailView.swift in Sources */,
+				EAE0E68124CBD7A00021629B /* TabBarView.swift in Sources */,
 				EA27B7FF24B2C768007EF44F /* Testing.swift in Sources */,
 				EA27B7F724B2C47D007EF44F /* Question.swift in Sources */,
 				EA27B7E224B21BBD007EF44F /* BlurView.swift in Sources */,
 				EA27B86324B75F36007EF44F /* CustomTextField.swift in Sources */,
+				EAE0E68724CBD9F60021629B /* CasesTitles.swift in Sources */,
 				EA27B7F924B2C67A007EF44F /* QuestionSet.swift in Sources */,
 				EA27B7FB24B2C6C9007EF44F /* QuestionViewModel.swift in Sources */,
 				EA27B7F324B222F2007EF44F /* TextMethod.swift in Sources */,
@@ -483,6 +530,7 @@
 				EA27B7B524B2161D007EF44F /* News_Prosecutor.xcdatamodeld in Sources */,
 				EA27B85824B5C233007EF44F /* DetectResultDetailDataManager.swift in Sources */,
 				EAE0E5DF24C5165C0021629B /* LottieView.swift in Sources */,
+				EAE0E67B24CBD5C10021629B /* WebView.swift in Sources */,
 				EA27B7D724B219FF007EF44F /* MethodView.swift in Sources */,
 				EA27B7EF24B22218007EF44F /* Tips.swift in Sources */,
 			);
