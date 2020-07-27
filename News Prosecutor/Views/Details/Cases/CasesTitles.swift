@@ -29,7 +29,6 @@ struct CasesTitles: View {
                     WebURLView()
                 }
             }
-            .background(Color.white)
             .padding(.horizontal, self.data.expand ? 0 : 20)
             .contentShape(Rectangle())
             

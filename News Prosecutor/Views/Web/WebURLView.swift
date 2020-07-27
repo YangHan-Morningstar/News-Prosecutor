@@ -62,12 +62,14 @@ struct WebURLView: View {
                 }) {
                     VStack {
                         Text(post.url)
-                            .foregroundColor(Color.black)
+                            .foregroundColor(Color("background5"))
                         // LabelledDivider(label: "or")
                     }
                 }
             }
         }
+        .frame(maxWidth: screen.size.width)
+        .background(Color("background1"))
         .sheet(isPresented: $showWebDetail) {
             ZStack {
                 WebURLDetailView(url: self.currentPost!.url)

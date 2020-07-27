@@ -196,7 +196,6 @@
 		EA27B7C924B21895007EF44F /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				EAE0E68224CBD8790021629B /* CasesClassification */,
 				EAE0E67924CBD5A20021629B /* Web */,
 				EAE0E5D124C493630021629B /* Progress */,
 				EA27B85D24B6EDB1007EF44F /* Ring */,
@@ -396,13 +395,6 @@
 				EAE0E67E24CBD6DA0021629B /* WebURLView.swift */,
 			);
 			path = Web;
-			sourceTree = "<group>";
-		};
-		EAE0E68224CBD8790021629B /* CasesClassification */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = CasesClassification;
 			sourceTree = "<group>";
 		};
 		EAE0E68324CBD8E90021629B /* Cases */ = {
