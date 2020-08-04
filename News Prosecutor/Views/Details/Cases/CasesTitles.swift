@@ -12,6 +12,7 @@ struct CasesTitles: View {
     
     @Binding var data : CasesCard
     @Binding var hero : Bool
+    @Binding var caseName: String
     
     var body: some View {
         ZStack(alignment: .topTrailing) {
@@ -26,7 +27,7 @@ struct CasesTitles: View {
                 }
                 
                 if self.data.expand {
-                    WebURLView()
+                    WebURLView(caseName: $caseName)
                 }
             }
             .padding(.horizontal, self.data.expand ? 0 : 20)

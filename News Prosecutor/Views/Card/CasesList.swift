@@ -11,9 +11,8 @@ import SwiftUI
 struct CasesList: View {
     
     @State var data = [
-        
         CasesCard(image: "政治", expand: false),
-        CasesCard(image: "科学",  expand: false),
+        CasesCard(image: "科学", expand: false),
         CasesCard(image: "文化", expand: false),
         CasesCard(image: "社会", expand: false),
         CasesCard(image: "健康", expand: false),
@@ -25,7 +24,7 @@ struct CasesList: View {
     var body: some View {
         VStack{
             ScrollView(.vertical, showsIndicators: false) {
-                VStack{
+                VStack {
                     HStack{
                         VStack(alignment: .leading, spacing: 12) {
                             Text("官方辟谣数据")
@@ -44,7 +43,7 @@ struct CasesList: View {
                             
                             GeometryReader {g in
                                 
-                                CasesTitles(data: self.$data[i], hero: self.$hero)
+                                CasesTitles(data: self.$data[i], hero: self.$hero, caseName: self.$data[i].image)
                                     .offset(y: self.data[i].expand ? -g.frame(in: .global).minY : 0)
                                     .opacity(self.hero ? (self.data[i].expand ? 1 : 0) : 1)
                                     .onTapGesture {
@@ -72,7 +71,6 @@ struct CasesList: View {
 }
 
 struct CasesCard : Identifiable {
-    
     var id = UUID()
     var image : String
     var expand : Bool
