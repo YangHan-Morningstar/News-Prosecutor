@@ -29,17 +29,26 @@ struct WebURLView: View {
         
         VStack(alignment: .leading, spacing: 10) {
             ForEach(caseDataVM.caseClassification.list) { newsDatas in
-                Button(action: {
-                    self.showWebDetail.toggle()
-                    self.currentPost = newsDatas
-                }) {
-                    VStack(alignment: .leading) {
-                        Text(newsDatas.title)
-                            .foregroundColor(Color("background5"))
+                VStack(alignment: .leading) {
+                    HStack {
+                        Text(self.caseName)
+                            .frame(width: 40, height: 40)
+                            .background(Color.blue)
+                            .clipShape(Circle())
                             .padding(.leading)
-                            .padding(.trailing)
-                        LabelledDivider(label: newsDatas.time)
+                        
+                        Button(action: {
+                            self.showWebDetail.toggle()
+                            self.currentPost = newsDatas
+                        }) {
+                            Text(newsDatas.title)
+                                .foregroundColor(Color("background5"))
+                                .padding(.leading)
+                                .padding(.trailing)
+                        }
                     }
+                    
+                    LabelledDivider(label: newsDatas.time)
                 }
             }
         }

@@ -24,6 +24,7 @@ struct CasesTitles: View {
                         .resizable()
                         .frame(height: self.data.expand ? 350 : 300)
                         .cornerRadius(self.data.expand ? 0 : 30)
+                        .padding(.bottom, self.data.expand ? 20 : 0)
                 }
                 
                 if self.data.expand {
