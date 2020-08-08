@@ -39,6 +39,7 @@
 		EA27B85F24B6EDC7007EF44F /* DetectRingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA27B85E24B6EDC7007EF44F /* DetectRingView.swift */; };
 		EA27B86124B6EDE4007EF44F /* RingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA27B86024B6EDE4007EF44F /* RingView.swift */; };
 		EA27B86324B75F36007EF44F /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA27B86224B75F36007EF44F /* CustomTextField.swift */; };
+		EA5D67B524DE490700439F8D /* EnglishFakeNewsTextClassifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = EA5D67B424DE490700439F8D /* EnglishFakeNewsTextClassifier.mlmodel */; };
 		EADBDA9E24B81163009A81E8 /* CharacterLimitTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = EADBDA9D24B81163009A81E8 /* CharacterLimitTextField.swift */; };
 		EADBDAA324B94C56009A81E8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EADBDAA124B94C56009A81E8 /* LaunchScreen.storyboard */; };
 		EADBDAA924BAA18D009A81E8 /* DismissKeyboardHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EADBDAA824BAA18D009A81E8 /* DismissKeyboardHelper.swift */; };
@@ -85,6 +86,7 @@
 		EA27B85E24B6EDC7007EF44F /* DetectRingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetectRingView.swift; sourceTree = "<group>"; };
 		EA27B86024B6EDE4007EF44F /* RingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RingView.swift; sourceTree = "<group>"; };
 		EA27B86224B75F36007EF44F /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		EA5D67B424DE490700439F8D /* EnglishFakeNewsTextClassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = EnglishFakeNewsTextClassifier.mlmodel; sourceTree = "<group>"; };
 		EADBDA9D24B81163009A81E8 /* CharacterLimitTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterLimitTextField.swift; sourceTree = "<group>"; };
 		EADBDAA224B94C56009A81E8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "../../../竞赛/iJudger 下午4.05.09/iJudger/Base.lproj/LaunchScreen.storyboard"; sourceTree = "<group>"; };
 		EADBDAA824BAA18D009A81E8 /* DismissKeyboardHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DismissKeyboardHelper.swift; sourceTree = "<group>"; };
@@ -216,6 +218,7 @@
 			isa = PBXGroup;
 			children = (
 				EA27B7CF24B2195E007EF44F /* FakeNewsClassifier.mlmodel */,
+				EA5D67B424DE490700439F8D /* EnglishFakeNewsTextClassifier.mlmodel */,
 				EAE0E60324C7D7030021629B /* FakeNewsImageClassifier.mlmodel */,
 			);
 			path = MachineLearningModel;
@@ -483,6 +486,7 @@
 				EA27B7B524B2161D007EF44F /* News_Prosecutor.xcdatamodeld in Sources */,
 				EA27B85824B5C233007EF44F /* DetectResultDetailDataManager.swift in Sources */,
 				EAE0E5DF24C5165C0021629B /* LottieView.swift in Sources */,
+				EA5D67B524DE490700439F8D /* EnglishFakeNewsTextClassifier.mlmodel in Sources */,
 				EA27B7D724B219FF007EF44F /* MethodView.swift in Sources */,
 				EA27B7EF24B22218007EF44F /* Tips.swift in Sources */,
 			);
