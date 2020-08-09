@@ -13,6 +13,7 @@ struct WebURLView: View {
     @ObservedObject var caseDataVM = CaseDataViewModel()
     
     @State var currentPost: NewsData?
+    @State var currentNewsDataList: [NewsData] = []
     @State var showWebDetail = false
     @Binding var caseName: String
     
@@ -51,11 +52,18 @@ struct WebURLView: View {
                     LabelledDivider(label: newsDatas.time)
                 }
             }
+            
+            if currentNewsDataList.isEmpty {
+                LottieView(filename: "26944-loading-animation")
+                    .frame(width: 200, height: 200)
+                    .offset(y: -50)
+            }
         }
         .frame(maxWidth: screen.size.width)
         .background(Color("background1"))
         .onAppear() {
             self.caseDataVM.getData(category: self.caseNameDict[self.caseName] ?? "kexue")
+            self.currentNewsDataList = self.caseDataVM.caseClassification.list
         }
         .sheet(isPresented: $showWebDetail) {
             ZStack {

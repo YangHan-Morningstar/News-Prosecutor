@@ -43,6 +43,7 @@
 		EA5D67AB24D949AD00439F8D /* NewsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5D67AA24D949AD00439F8D /* NewsData.swift */; };
 		EA5D67AF24D94B4800439F8D /* CaseDataViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5D67AE24D94B4800439F8D /* CaseDataViewModel.swift */; };
 		EA5D67B324D9632500439F8D /* LabelDivider.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5D67B224D9632500439F8D /* LabelDivider.swift */; };
+		EAD52CA124DFD26300A1B6D5 /* 26944-loading-animation.json in Resources */ = {isa = PBXBuildFile; fileRef = EAD52CA024DFD26300A1B6D5 /* 26944-loading-animation.json */; };
 		EADBDA9E24B81163009A81E8 /* CharacterLimitTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = EADBDA9D24B81163009A81E8 /* CharacterLimitTextField.swift */; };
 		EADBDAA324B94C56009A81E8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EADBDAA124B94C56009A81E8 /* LaunchScreen.storyboard */; };
 		EADBDAA924BAA18D009A81E8 /* DismissKeyboardHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EADBDAA824BAA18D009A81E8 /* DismissKeyboardHelper.swift */; };
@@ -99,6 +100,7 @@
 		EA5D67AA24D949AD00439F8D /* NewsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsData.swift; sourceTree = "<group>"; };
 		EA5D67AE24D94B4800439F8D /* CaseDataViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaseDataViewModel.swift; sourceTree = "<group>"; };
 		EA5D67B224D9632500439F8D /* LabelDivider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelDivider.swift; sourceTree = "<group>"; };
+		EAD52CA024DFD26300A1B6D5 /* 26944-loading-animation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "26944-loading-animation.json"; sourceTree = "<group>"; };
 		EADBDA9D24B81163009A81E8 /* CharacterLimitTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterLimitTextField.swift; sourceTree = "<group>"; };
 		EADBDAA224B94C56009A81E8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "../../../竞赛/iJudger 下午4.05.09/iJudger/Base.lproj/LaunchScreen.storyboard"; sourceTree = "<group>"; };
 		EADBDAA824BAA18D009A81E8 /* DismissKeyboardHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DismissKeyboardHelper.swift; sourceTree = "<group>"; };
@@ -400,6 +402,7 @@
 			children = (
 				EAE0E5D924C515C80021629B /* 14651-error-animation.json */,
 				EAE0E5DA24C515C80021629B /* 433-checked-done.json */,
+				EAD52CA024DFD26300A1B6D5 /* 26944-loading-animation.json */,
 			);
 			path = Lottie;
 			sourceTree = "<group>";
@@ -524,6 +527,7 @@
 				EADBDAA324B94C56009A81E8 /* LaunchScreen.storyboard in Resources */,
 				EA27B7BC24B2161E007EF44F /* Preview Assets.xcassets in Resources */,
 				EA27B7B924B2161E007EF44F /* Assets.xcassets in Resources */,
+				EAD52CA124DFD26300A1B6D5 /* 26944-loading-animation.json in Resources */,
 				EAE0E5DB24C515C80021629B /* 14651-error-animation.json in Resources */,
 				EAE0E5DC24C515C80021629B /* 433-checked-done.json in Resources */,
 			);
