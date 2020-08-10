@@ -11,6 +11,7 @@ import SwiftUI
 struct TextMethod: View {
     
     @State private var showingAlert = false
+    @State private var showingAdvice = false
     @State private var textContentIsEmpty = true
     @State private var result = ""
     @State private var show = false
@@ -77,6 +78,8 @@ struct TextMethod: View {
                     }
                     
                     self.detectResultDetailVM.saveDetectResultDetail(detectResultDetail: DetectResultDetailModel(id: UUID(), methodName: "文本新闻检测", result: booleanResult))
+                    
+                    self.textClassifierManager.getAdviceData(content: self.textInput)
                 }
                 
                 self.showingAlert.toggle()
@@ -104,6 +107,8 @@ struct TextMethod: View {
                     }
                     
                     self.detectResultDetailVM.saveDetectResultDetail(detectResultDetail: DetectResultDetailModel(id: UUID(), methodName: "文本新闻检测", result: booleanResult))
+                    
+                    self.textClassifierManager.getAdviceData(content: self.textInput)
                 }
                 
                 self.showingAlert.toggle()
@@ -124,10 +129,34 @@ struct TextMethod: View {
             if self.result == "" {
                 alert = Alert(title: Text("出错啦"), message: Text("您输入的新闻文本不能为空哦"), dismissButton: .default(Text("完成"), action: {self.result = ""}))
             } else {
-                alert = Alert(title: Text("检测结果"), message: Text("您输入的新闻很有可能是\(result)哦"), dismissButton: .default(Text("完成"), action: {self.result = ""}))
+                alert = Alert(title: Text("检测结果"), message: Text("您输入的新闻很有可能是\(result)哦"), dismissButton: .default(Text("完成"), action: {
+                    self.result = ""
+                    self.showingAdvice.toggle()
+                }))
             }
             
             return alert
+        }
+        .sheet(isPresented: $showingAdvice) {
+            ZStack {
+                AdviceList(adviceData: self.textClassifierManager.adviceData)
+                
+                VStack {
+                    HStack {
+                        Spacer()
+                        
+                        Button(action: { self.showingAdvice.toggle() }) {
+                            Image(systemName: "xmark")
+                                .padding()
+                                .background(BlurView(style: .systemMaterial))
+                                .clipShape(Circle())
+                        }
+                    }
+                    
+                    Spacer()
+                }
+                .padding()
+            }
         }
         .onTapGesture {
             DismissKeyboardHelper.dismiss()
