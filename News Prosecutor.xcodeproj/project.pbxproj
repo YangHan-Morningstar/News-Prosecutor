@@ -44,6 +44,7 @@
 		EA5D67AF24D94B4800439F8D /* CaseDataViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5D67AE24D94B4800439F8D /* CaseDataViewModel.swift */; };
 		EA5D67B324D9632500439F8D /* LabelDivider.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5D67B224D9632500439F8D /* LabelDivider.swift */; };
 		EAD52CA124DFD26300A1B6D5 /* 26944-loading-animation.json in Resources */ = {isa = PBXBuildFile; fileRef = EAD52CA024DFD26300A1B6D5 /* 26944-loading-animation.json */; };
+		EAD52CAB24E0E31F00A1B6D5 /* EnglishFakeNewsTextClassifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = EAD52CAA24E0E31F00A1B6D5 /* EnglishFakeNewsTextClassifier.mlmodel */; };
 		EADBDA9E24B81163009A81E8 /* CharacterLimitTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = EADBDA9D24B81163009A81E8 /* CharacterLimitTextField.swift */; };
 		EADBDAA324B94C56009A81E8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EADBDAA124B94C56009A81E8 /* LaunchScreen.storyboard */; };
 		EADBDAA924BAA18D009A81E8 /* DismissKeyboardHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EADBDAA824BAA18D009A81E8 /* DismissKeyboardHelper.swift */; };
@@ -101,6 +102,7 @@
 		EA5D67AE24D94B4800439F8D /* CaseDataViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaseDataViewModel.swift; sourceTree = "<group>"; };
 		EA5D67B224D9632500439F8D /* LabelDivider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelDivider.swift; sourceTree = "<group>"; };
 		EAD52CA024DFD26300A1B6D5 /* 26944-loading-animation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "26944-loading-animation.json"; sourceTree = "<group>"; };
+		EAD52CAA24E0E31F00A1B6D5 /* EnglishFakeNewsTextClassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = EnglishFakeNewsTextClassifier.mlmodel; path = "../../../../../实验室/iOS Developer/mlmodels/self/EnglishFakeNewsTextClassifier.mlproj/Models/EnglishFakeNewsTextClassifier.mlmodel"; sourceTree = "<group>"; };
 		EADBDA9D24B81163009A81E8 /* CharacterLimitTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterLimitTextField.swift; sourceTree = "<group>"; };
 		EADBDAA224B94C56009A81E8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "../../../竞赛/iJudger 下午4.05.09/iJudger/Base.lproj/LaunchScreen.storyboard"; sourceTree = "<group>"; };
 		EADBDAA824BAA18D009A81E8 /* DismissKeyboardHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DismissKeyboardHelper.swift; sourceTree = "<group>"; };
@@ -239,6 +241,7 @@
 			isa = PBXGroup;
 			children = (
 				EA27B7CF24B2195E007EF44F /* FakeNewsClassifier.mlmodel */,
+				EAD52CAA24E0E31F00A1B6D5 /* EnglishFakeNewsTextClassifier.mlmodel */,
 				EAE0E60324C7D7030021629B /* FakeNewsImageClassifier.mlmodel */,
 			);
 			path = MachineLearningModel;
@@ -575,6 +578,7 @@
 				EA27B7FD24B2C709007EF44F /* AnswerButton.swift in Sources */,
 				EA27B85A24B5D7BD007EF44F /* DetectResultDetailModel.swift in Sources */,
 				EA5D67AB24D949AD00439F8D /* NewsData.swift in Sources */,
+				EAD52CAB24E0E31F00A1B6D5 /* EnglishFakeNewsTextClassifier.mlmodel in Sources */,
 				EA27B7E424B21BEB007EF44F /* MethodViewModel.swift in Sources */,
 				EA27B7EA24B220C4007EF44F /* TextClassifierViewModel.swift in Sources */,
 				EA27B7DF24B21B68007EF44F /* Learning.swift in Sources */,
