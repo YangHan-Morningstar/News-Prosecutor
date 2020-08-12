@@ -13,4 +13,5 @@ struct NewsData: Decodable, Identifiable {
     var title: String
     var time: String
     var url: String
+    var pic: String
 }

@@ -20,6 +20,9 @@ struct CasesList: View {
     ]
     
     @State var hero = false
+    @State var showingHotPoint = false
+    
+    @ObservedObject var hotPointVM = HotPointDataViewModel()
     
     var body: some View {
         VStack{
@@ -33,9 +36,44 @@ struct CasesList: View {
                         }
                         
                         Spacer()
+                        
+                        Button(action: {
+                            self.hotPointVM.getData(url: "http://81.70.41.11:8888/hot")
+                            self.showingHotPoint.toggle()
+                        }) {
+                            Image(systemName: "pin.circle")
+                                .foregroundColor(Color("background5"))
+                                .font(.system(size: 26, weight: .medium))
+                                .frame(width: 26, height: 26)
+                                .background(BlurView(style: .systemMaterial))
+                                .clipShape(Circle())
+                                .shadow(color: Color.black.opacity(0.1), radius: 1, x: 0, y: 1)
+                                .shadow(color: Color.black.opacity(0.2), radius: 10, x: 0, y: 10)
+                        }
+                        .sheet(isPresented: $showingHotPoint) {
+                            ZStack {
+                                HotPointView(newsData: self.hotPointVM.hotPointData.list)
+                                
+                                VStack {
+                                    HStack {
+                                        Spacer()
+                                        
+                                        Button(action: { self.showingHotPoint.toggle() }) {
+                                            Image(systemName: "xmark")
+                                                .padding()
+                                                .background(BlurView(style: .systemMaterial))
+                                                .clipShape(Circle())
+                                        }
+                                    }
+                                    
+                                    Spacer()
+                                }
+                                .padding()
+                            }
+                        }
                     }
+                    .padding(.horizontal)
                     .padding(.top)
-                    .padding(.leading)
                     
                     VStack(spacing: 15) {
                         

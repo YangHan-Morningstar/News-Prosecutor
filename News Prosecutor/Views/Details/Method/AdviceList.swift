@@ -48,7 +48,6 @@ struct AdviceList: View {
                 }
             }
             .frame(maxWidth: screen.size.width)
-            //.background(Color("background1"))
             .sheet(isPresented: $showWebDetail) {
                 ZStack {
                     WebURLDetailView(url: self.currentPost!.url)

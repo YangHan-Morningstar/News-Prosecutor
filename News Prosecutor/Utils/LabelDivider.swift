@@ -10,11 +10,11 @@ import SwiftUI
 
 struct LabelledDivider: View {
 
-    let label: String
+    let label: String?
     let horizontalPadding: CGFloat
     let color: Color
 
-    init(label: String, horizontalPadding: CGFloat = 20, color: Color = .gray) {
+    init(label: String?, horizontalPadding: CGFloat = 20, color: Color = .gray) {
         self.label = label
         self.horizontalPadding = horizontalPadding
         self.color = color
@@ -22,11 +22,15 @@ struct LabelledDivider: View {
 
     var body: some View {
         HStack {
-            line
-            Text(label)
-                .foregroundColor(color)
-                .lineLimit(1)
-            line
+            if label != nil {
+                line
+                Text(label!)
+                    .foregroundColor(color)
+                    .lineLimit(1)
+                line
+            } else {
+                line
+            }
         }
     }
 
@@ -34,7 +38,7 @@ struct LabelledDivider: View {
         VStack {
             Divider()
                 .background(color)
-                .frame(width: UIScreen.main.bounds.size.width / 2 - 150)
+                .frame(width: (label != nil) ? UIScreen.main.bounds.size.width / 2 - 150 : UIScreen.main.bounds.size.width - 60)
         }
         .padding(horizontalPadding)
     }
