@@ -49,8 +49,9 @@
 		EAD52CAF24E0EB5F00A1B6D5 /* SearchedAdvice.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD52CAE24E0EB5F00A1B6D5 /* SearchedAdvice.swift */; };
 		EAD52CB124E0F30F00A1B6D5 /* AdviceList.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD52CB024E0F30F00A1B6D5 /* AdviceList.swift */; };
 		EAD52CBC24E3C0AE00A1B6D5 /* HotPointDataViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD52CBB24E3C0AE00A1B6D5 /* HotPointDataViewModel.swift */; };
-		EAD52CBF24E3C1FA00A1B6D5 /* HotPointView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD52CBE24E3C1FA00A1B6D5 /* HotPointView.swift */; };
+		EAD52CBF24E3C1FA00A1B6D5 /* HotPointRecommandView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD52CBE24E3C1FA00A1B6D5 /* HotPointRecommandView.swift */; };
 		EAD52CC224E3C2F900A1B6D5 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = EAD52CC124E3C2F900A1B6D5 /* SDWebImageSwiftUI */; };
+		EAD52CC824E65FD900A1B6D5 /* HotPointSortView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD52CC724E65FD900A1B6D5 /* HotPointSortView.swift */; };
 		EADBDA9E24B81163009A81E8 /* CharacterLimitTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = EADBDA9D24B81163009A81E8 /* CharacterLimitTextField.swift */; };
 		EADBDAA324B94C56009A81E8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EADBDAA124B94C56009A81E8 /* LaunchScreen.storyboard */; };
 		EADBDAA924BAA18D009A81E8 /* DismissKeyboardHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EADBDAA824BAA18D009A81E8 /* DismissKeyboardHelper.swift */; };
@@ -113,7 +114,8 @@
 		EAD52CAE24E0EB5F00A1B6D5 /* SearchedAdvice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchedAdvice.swift; sourceTree = "<group>"; };
 		EAD52CB024E0F30F00A1B6D5 /* AdviceList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdviceList.swift; sourceTree = "<group>"; };
 		EAD52CBB24E3C0AE00A1B6D5 /* HotPointDataViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotPointDataViewModel.swift; sourceTree = "<group>"; };
-		EAD52CBE24E3C1FA00A1B6D5 /* HotPointView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotPointView.swift; sourceTree = "<group>"; };
+		EAD52CBE24E3C1FA00A1B6D5 /* HotPointRecommandView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotPointRecommandView.swift; sourceTree = "<group>"; };
+		EAD52CC724E65FD900A1B6D5 /* HotPointSortView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotPointSortView.swift; sourceTree = "<group>"; };
 		EADBDA9D24B81163009A81E8 /* CharacterLimitTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterLimitTextField.swift; sourceTree = "<group>"; };
 		EADBDAA224B94C56009A81E8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "../../../竞赛/iJudger 下午4.05.09/iJudger/Base.lproj/LaunchScreen.storyboard"; sourceTree = "<group>"; };
 		EADBDAA824BAA18D009A81E8 /* DismissKeyboardHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DismissKeyboardHelper.swift; sourceTree = "<group>"; };
@@ -375,7 +377,8 @@
 		EAD52CBD24E3C1D800A1B6D5 /* RefuteRumorPlatform */ = {
 			isa = PBXGroup;
 			children = (
-				EAD52CBE24E3C1FA00A1B6D5 /* HotPointView.swift */,
+				EAD52CBE24E3C1FA00A1B6D5 /* HotPointRecommandView.swift */,
+				EAD52CC724E65FD900A1B6D5 /* HotPointSortView.swift */,
 			);
 			path = RefuteRumorPlatform;
 			sourceTree = "<group>";
@@ -581,7 +584,7 @@
 				EA5D67AF24D94B4800439F8D /* CaseDataViewModel.swift in Sources */,
 				EA27B86124B6EDE4007EF44F /* RingView.swift in Sources */,
 				EADBDAA924BAA18D009A81E8 /* DismissKeyboardHelper.swift in Sources */,
-				EAD52CBF24E3C1FA00A1B6D5 /* HotPointView.swift in Sources */,
+				EAD52CBF24E3C1FA00A1B6D5 /* HotPointRecommandView.swift in Sources */,
 				EA27B7DB24B21B19007EF44F /* Method.swift in Sources */,
 				EAE0E67F24CBD6DA0021629B /* WebURLView.swift in Sources */,
 				EA27B7E624B21CD1007EF44F /* LearningViewModel.swift in Sources */,
@@ -595,6 +598,7 @@
 				EAE0E60424C7D7030021629B /* FakeNewsImageClassifier.mlmodel in Sources */,
 				EA27B7B024B2161D007EF44F /* AppDelegate.swift in Sources */,
 				EA27B7F124B2228F007EF44F /* ImagePicker.swift in Sources */,
+				EAD52CC824E65FD900A1B6D5 /* HotPointSortView.swift in Sources */,
 				EA27B7B224B2161D007EF44F /* SceneDelegate.swift in Sources */,
 				EA27B7DD24B21B47007EF44F /* Modifier.swift in Sources */,
 				EADBDA9E24B81163009A81E8 /* CharacterLimitTextField.swift in Sources */,

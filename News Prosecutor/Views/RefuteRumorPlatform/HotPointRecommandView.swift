@@ -9,7 +9,7 @@
 import SwiftUI
 import SDWebImageSwiftUI
 
-struct HotPointView: View {
+struct HotPointRecommandView: View {
     
     @State var currentData: NewsData?
     @State var showingDetail = false

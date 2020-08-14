@@ -89,10 +89,5 @@ struct WebURLView: View {
     }
 }
 
-//struct WebURLView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        WebURLView(currentPost: NewsData(url: "https://www.google.com"))
-//    }
-//}
 
 

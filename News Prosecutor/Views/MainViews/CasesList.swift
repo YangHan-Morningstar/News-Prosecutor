@@ -20,7 +20,8 @@ struct CasesList: View {
     ]
     
     @State var hero = false
-    @State var showingHotPoint = false
+    @State var showingHotPointRecommand = false
+    @State var showingHotPointSort = false
     
     @ObservedObject var hotPointVM = HotPointDataViewModel()
     
@@ -37,9 +38,42 @@ struct CasesList: View {
                         
                         Spacer()
                         
+                        Button(action: { self.showingHotPointSort.toggle() }) {
+                            Image(systemName: "chart.pie")
+                                .foregroundColor(Color("background5"))
+                                .font(.system(size: 26, weight: .medium))
+                                .frame(width: 26, height: 26)
+                                .background(BlurView(style: .systemMaterial))
+                                .clipShape(Circle())
+                                .shadow(color: Color.black.opacity(0.1), radius: 1, x: 0, y: 1)
+                                .shadow(color: Color.black.opacity(0.2), radius: 10, x: 0, y: 10)
+                        }
+                        .padding(.trailing, 5)
+                        .sheet(isPresented: $showingHotPointSort) {
+                            ZStack {
+                                HotPointSortView()
+                                
+                                VStack {
+                                    HStack {
+                                        Spacer()
+                                        
+                                        Button(action: { self.showingHotPointSort.toggle() }) {
+                                            Image(systemName: "xmark")
+                                                .padding()
+                                                .background(BlurView(style: .systemMaterial))
+                                                .clipShape(Circle())
+                                        }
+                                    }
+                                    
+                                    Spacer()
+                                }
+                                .padding()
+                            }
+                        }
+                        
                         Button(action: {
                             self.hotPointVM.getData(url: "http://81.70.41.11:8888/hot")
-                            self.showingHotPoint.toggle()
+                            self.showingHotPointRecommand.toggle()
                         }) {
                             Image(systemName: "pin.circle")
                                 .foregroundColor(Color("background5"))
@@ -50,15 +84,15 @@ struct CasesList: View {
                                 .shadow(color: Color.black.opacity(0.1), radius: 1, x: 0, y: 1)
                                 .shadow(color: Color.black.opacity(0.2), radius: 10, x: 0, y: 10)
                         }
-                        .sheet(isPresented: $showingHotPoint) {
+                        .sheet(isPresented: $showingHotPointRecommand) {
                             ZStack {
-                                HotPointView(newsData: self.hotPointVM.hotPointData.list)
+                                HotPointRecommandView(newsData: self.hotPointVM.hotPointData.list)
                                 
                                 VStack {
                                     HStack {
                                         Spacer()
                                         
-                                        Button(action: { self.showingHotPoint.toggle() }) {
+                                        Button(action: { self.showingHotPointRecommand.toggle() }) {
                                             Image(systemName: "xmark")
                                                 .padding()
                                                 .background(BlurView(style: .systemMaterial))

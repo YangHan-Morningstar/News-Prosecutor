@@ -52,7 +52,7 @@ struct CasesTitles: View {
                     
                 }
                 .padding(.top, UIApplication.shared.windows.first?.safeAreaInsets.top)
-                .padding(.trailing,10)
+                .padding(.trailing, 10)
             }
         }
     }

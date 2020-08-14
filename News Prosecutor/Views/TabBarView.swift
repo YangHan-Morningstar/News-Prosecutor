@@ -13,12 +13,12 @@ struct TabBarView: View {
         TabView {
             HomeView().tabItem {
                 Image(systemName: "magnifyingglass")
-                Text("检查")
+                Text("新闻检查")
             }
             
             CasesList().tabItem {
-                Image(systemName: "list.bullet")
-                Text("辟谣案例")
+                Image(systemName: "rectangle.stack.badge.plus")
+                Text("辟谣数据")
             }
         }
     }
