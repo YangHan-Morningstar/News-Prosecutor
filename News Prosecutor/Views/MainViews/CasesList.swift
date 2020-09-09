@@ -23,8 +23,6 @@ struct CasesList: View {
     @State var showingHotPointRecommand = false
     @State var showingHotPointSort = false
     
-    @ObservedObject var hotPointVM = HotPointDataViewModel()
-    
     var body: some View {
         VStack{
             ScrollView(.vertical, showsIndicators: false) {
@@ -72,7 +70,6 @@ struct CasesList: View {
                         }
                         
                         Button(action: {
-                            self.hotPointVM.getData(url: "http://81.70.41.11:8888/hot")
                             self.showingHotPointRecommand.toggle()
                         }) {
                             Image(systemName: "pin.circle")
@@ -86,7 +83,7 @@ struct CasesList: View {
                         }
                         .sheet(isPresented: $showingHotPointRecommand) {
                             ZStack {
-                                HotPointRecommandView(newsData: self.hotPointVM.hotPointData.list)
+                                HotPointRecommandView()
                                 
                                 VStack {
                                     HStack {

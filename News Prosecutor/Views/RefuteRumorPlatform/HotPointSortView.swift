@@ -18,7 +18,7 @@ struct HotPointSortView: View {
     
     var body: some View {
         ScrollView {
-            VStack() {
+            VStack {
                 HStack {
                     Text("热点排行")
                         .font(.title)

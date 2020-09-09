@@ -18,33 +18,43 @@ struct AdviceList: View {
     var body: some View {
         ScrollView {
             VStack(alignment: .leading, spacing: 10) {
-                Text("相关辟谣数据")
-                    .font(.title)
-                    .fontWeight(.bold)
-                    .padding()
-                
-                ForEach(adviceData.list) { newsDatas in
-                    VStack(alignment: .leading) {
-                        HStack {
-                            Text("辟谣")
-                                .frame(width: 40, height: 40)
-                                .background(Color.blue)
-                                .clipShape(Circle())
-                                .padding(.leading)
-                            
-                            Button(action: {
-                                self.showWebDetail.toggle()
-                                self.currentPost = newsDatas
-                            }) {
-                                Text(newsDatas.title)
-                                    .foregroundColor(Color("background5"))
+                HStack {
+                    Text("相关辟谣数据")
+                        .font(.title)
+                        .fontWeight(.bold)
+                        .padding()
+                    
+                    Spacer()
+                }
+
+                if !adviceData.list.isEmpty {
+                    ForEach(adviceData.list) { newsDatas in
+                        VStack(alignment: .leading) {
+                            HStack {
+                                Text("辟谣")
+                                    .frame(width: 40, height: 40)
+                                    .background(Color.blue)
+                                    .clipShape(Circle())
                                     .padding(.leading)
-                                    .padding(.trailing)
+                                
+                                Button(action: {
+                                    self.showWebDetail.toggle()
+                                    self.currentPost = newsDatas
+                                }) {
+                                    Text(newsDatas.title)
+                                        .foregroundColor(Color("background5"))
+                                        .padding(.leading)
+                                        .padding(.trailing)
+                                }
                             }
+                            
+                            LabelledDivider(label: newsDatas.time)
                         }
-                        
-                        LabelledDivider(label: newsDatas.time)
                     }
+                } else {
+                    LottieView(filename: "26944-loading-animation")
+                        .frame(width: 200, height: 200)
+                        .offset(y: -50)
                 }
             }
             .frame(maxWidth: screen.size.width)
