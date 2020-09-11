@@ -11,25 +11,27 @@ import Combine
 import NaturalLanguage
 
 class TextClassifierViewModel: ObservableObject {
-    var textModel: FakeNewsClassifier
+    var chineseTextModel: FakeNewsClassifier
     var englishTextModel: EnglishFakeNewsTextClassifier
+    var textCategoryClassifierModel: NewsCategoryClassifier
     
     var session: URLSession
     var url: String
     
     var result: String?
     var languageCategory: String?
-    let newsCategroy = [
-        "1": "假新闻",
-        "0": "真新闻",
+    let newsDetectResultDict = [
         "Fake": "假新闻",
-        "True": "真新闻"
+        "True": "真新闻",
+        "true": "真新闻",
+        "fake": "假新闻"
     ]
     @Published var adviceData: Advice = Advice(list: [])
     
     init() {
-        textModel = FakeNewsClassifier()
+        chineseTextModel = FakeNewsClassifier()
         englishTextModel = EnglishFakeNewsTextClassifier()
+        textCategoryClassifierModel = NewsCategoryClassifier()
         session = URLSession(configuration: .default)
         url = "http://81.70.41.11:8888/search"
     }
@@ -43,15 +45,24 @@ class TextClassifierViewModel: ObservableObject {
                     fatalError("Predicting errors!")
                 }
                 
-                if let prediction = self.newsCategroy[predictionResult.label] {
+                if let prediction = self.newsDetectResultDict[predictionResult.label] {
                     result = prediction
                 }
             } else {
-                guard let predictionResult = try? self.textModel.prediction(text: textContent) else {
+                guard let news_category = try? self.textCategoryClassifierModel.prediction(text: textContent) else {
                     fatalError("Predicting errors!")
                 }
                 
-                if let prediction = self.newsCategroy[predictionResult.label] {
+                if news_category.label != "时政" && news_category.label != "科技" && news_category.label != "教育" {
+                    result = "不在模型检测的新闻种类内"
+                    return result
+                }
+                
+                guard let predictionResult = try? self.chineseTextModel.prediction(text: textContent) else {
+                    fatalError("Predicting errors!")
+                }
+                
+                if let prediction = self.newsDetectResultDict[predictionResult.label] {
                     result = prediction
                 }
             }

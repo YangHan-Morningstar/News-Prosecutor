@@ -17,7 +17,7 @@ struct AdviceList: View {
     
     var body: some View {
         ScrollView {
-            VStack(alignment: .leading, spacing: 10) {
+            VStack(spacing: 10) {
                 HStack {
                     Text("相关辟谣数据")
                         .font(.title)

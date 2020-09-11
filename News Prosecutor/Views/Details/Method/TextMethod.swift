@@ -127,7 +127,9 @@ struct TextMethod: View {
             var alert: Alert
             
             if self.result == "" {
-                alert = Alert(title: Text("出错啦"), message: Text("您输入的新闻文本不能为空哦"), dismissButton: .default(Text("完成"), action: {self.result = ""}))
+                alert = Alert(title: Text("出错啦"), message: Text("您输入的新闻文本不能为空哦"), dismissButton: .default(Text("完成")))
+            } else if self.result == "不在模型检测的新闻种类内" {
+                alert = Alert(title: Text("出错啦"), message: Text("您输入的新闻的种类不在当前版本的检测范围中哦"), dismissButton: .default(Text("完成"), action: {self.result = ""}))
             } else {
                 alert = Alert(title: Text("检测结果"), message: Text("您输入的新闻很有可能是\(result)哦"), dismissButton: .default(Text("完成"), action: {
                     self.result = ""
