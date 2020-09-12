@@ -68,7 +68,7 @@ struct TextMethod: View {
             CustomTextField(placeholder: "请输入新闻文本", text: $textInput) {
                 var booleanResult: Bool
                 
-                if self.textInput != "" {
+                if !self.textInput.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
                     self.result = self.textClassifierManager.classify(self.textInput)!
                     
                     if self.result == "真新闻" {
@@ -97,7 +97,7 @@ struct TextMethod: View {
             Button(action: {
                 var booleanResult: Bool
                 
-                if self.textInput != "" {
+                if !self.textInput.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
                     self.result = self.textClassifierManager.classify(self.textInput)!
                     
                     if self.result == "真新闻" {
