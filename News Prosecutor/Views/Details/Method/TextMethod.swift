@@ -30,7 +30,7 @@ struct TextMethod: View {
                 .edgesIgnoringSafeArea(.bottom )
             
             VStack {
-                Text("使用机器学习模型进行检测")
+                Text("使用人工智能技术进行检测")
                     .font(.title)
                     .bold()
                     .foregroundColor(.white)

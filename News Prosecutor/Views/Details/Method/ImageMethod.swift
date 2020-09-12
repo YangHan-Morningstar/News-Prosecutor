@@ -36,7 +36,7 @@ struct ImageMethod: View {
                     .edgesIgnoringSafeArea(.bottom)
                 
                 VStack {
-                    Text("使用机器学习模型进行检测")
+                    Text("使用人工智能技术进行检测")
                         .font(.title)
                         .bold()
                         .foregroundColor(.white)
@@ -76,11 +76,14 @@ struct ImageMethod: View {
                      .frame(maxWidth: .infinity)
                      .cornerRadius(30)
                      .padding()
-                     .offset(y: showImage ? 240 : screen.height)
+                     .offset(y: 240)
+                     .opacity(showImage ? 1 : 0)
+                     .animation(.easeInOut(duration: 0.8))
                 
                 Button(action: {self.showSheet = true}) {
                     Text("点击此处选择图片")
-                        .offset(y: showImage ? screen.height : 0)
+                        .opacity(showImage ? 0 : 1)
+                        .animation(.easeInOut(duration: 1.6))
                 }
                 .frame(height: 260)
                 .frame(maxWidth: .infinity)
@@ -101,6 +104,25 @@ struct ImageMethod: View {
                         ]
                     )
                 }
+                
+                Button("删除图片") {
+                    
+                    if self.image == nil {
+                        self.showingAlert.toggle()
+                    } else {
+                        self.showImage.toggle()
+                        
+                        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.8) {
+                            self.image = nil
+                        }
+                    }
+                }
+                .padding(12)
+                .padding(.horizontal, 30)
+                .background(Color(#colorLiteral(red: 0, green: 0.7529411765, blue: 1, alpha: 1)))
+                .clipShape(RoundedRectangle(cornerRadius: 20, style: .continuous))
+                .shadow(color: Color(#colorLiteral(red: 0, green: 0.7529411765, blue: 1, alpha: 1)).opacity(0.2), radius: 20, x: 0, y: 20)
+                .offset(y: 550)
                 
                 Button("开始检测") {
                     var booleanResult: Bool
@@ -128,7 +150,7 @@ struct ImageMethod: View {
                 .background(Color(#colorLiteral(red: 0, green: 0.7529411765, blue: 1, alpha: 1)))
                 .clipShape(RoundedRectangle(cornerRadius: 20, style: .continuous))
                 .shadow(color: Color(#colorLiteral(red: 0, green: 0.7529411765, blue: 1, alpha: 1)).opacity(0.2), radius: 20, x: 0, y: 20)
-                .offset(y: 530)
+                .offset(y: 620)
                 
                 Spacer()
             }
@@ -138,13 +160,16 @@ struct ImageMethod: View {
                 var alert: Alert
                 
                 if image == nil {
-                    alert = Alert(title: Text("出错啦"), message: Text("您选择的图片不能为空哦"), dismissButton: .default(Text("完成")))
+                    alert = Alert(title: Text("出错啦"), message: Text("您的图片不能为空哦"), dismissButton: .default(Text("完成")))
                 } else {
                     alert = Alert(title: Text("识别结果"), message: Text("您的输入图片中的新闻有\(imageClassfyResult[1]!)%的概率是\(imageClassfyResult[0]!)哦"), dismissButton: .default(Text("完成"), action: {
                         self.showImage.toggle()
                         self.imageClassifierManager.result = []
                         self.imageClassfyResult = []
-                        self.image = nil
+                        
+                        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.8) {
+                            self.image = nil
+                        }
                     }))
                 }
                 
