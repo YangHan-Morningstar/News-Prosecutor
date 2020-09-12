@@ -22,6 +22,7 @@ struct CustomTextField: UIViewRepresentable {
     
     func makeUIView(context: Context) -> UITextField {
         let view = UITextField()
+        view.setContentCompressionResistancePriority(.defaultLow, for: .horizontal)
         view.placeholder = placeholder
         view.text = text
         view.delegate = context.coordinator
