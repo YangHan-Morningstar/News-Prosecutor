@@ -42,10 +42,11 @@ struct AnswerButton: View {
                 }
             }
         }
-        .frame(width: 200, height: 50)
+        .padding(12)
+        .padding(.horizontal, 30)
         .foregroundColor(.white)
-        .font(.headline)
-        .background(Color.blue)
-        .cornerRadius(10)
+        .background(Color(#colorLiteral(red: 0, green: 0.7529411765, blue: 1, alpha: 1)))
+        .clipShape(RoundedRectangle(cornerRadius: 20, style: .continuous))
+        .shadow(color: Color(#colorLiteral(red: 0, green: 0.7529411765, blue: 1, alpha: 1)).opacity(0.2), radius: 20, x: 0, y: 20)
     }
 }

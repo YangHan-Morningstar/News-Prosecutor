@@ -30,8 +30,6 @@ struct CustomProgressView: View {
                 .fill(LinearGradient(gradient: .init(colors: [Color("card2"), Color("card3")]), startPoint: .leading, endPoint: .trailing))
                 .frame(width: width, height: 22)
         }
-        .padding(18)
-        .background(Color("background4").opacity(0.085))
         .cornerRadius(15)
         .padding()
     }

@@ -55,8 +55,8 @@ struct WebURLView: View {
             
             if currentNewsDataList.isEmpty {
                 LottieView(filename: "26944-loading-animation")
-                    .frame(width: 200, height: 200)
-                    .offset(y: -50)
+                    .frame(width: 66, height: 66)
+                    .offset(y: 120)
             }
         }
         .frame(maxWidth: screen.size.width)
@@ -67,7 +67,7 @@ struct WebURLView: View {
         }
         .sheet(isPresented: $showWebDetail) {
             ZStack {
-                WebURLDetailView(url: self.currentPost!.url)
+                WebURLDetail(url: self.currentPost!.url)
                 
                 VStack {
                     HStack {
@@ -88,6 +88,7 @@ struct WebURLView: View {
         }
     }
 }
+
 
 
 

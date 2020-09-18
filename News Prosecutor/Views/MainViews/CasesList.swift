@@ -112,7 +112,7 @@ struct CasesList: View {
                             
                             GeometryReader {g in
                                 
-                                CasesTitles(data: self.$data[i], hero: self.$hero, caseName: self.$data[i].image)
+                                EachCaseListContent(data: self.$data[i], hero: self.$hero, caseName: self.$data[i].image)
                                     .offset(y: self.data[i].expand ? -g.frame(in: .global).minY : 0)
                                     .opacity(self.hero ? (self.data[i].expand ? 1 : 0) : 1)
                                     .onTapGesture {

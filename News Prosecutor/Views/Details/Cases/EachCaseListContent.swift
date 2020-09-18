@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-struct CasesTitles: View {
+struct EachCaseListContent: View {
     
     @Binding var data : CasesCard
     @Binding var hero : Bool

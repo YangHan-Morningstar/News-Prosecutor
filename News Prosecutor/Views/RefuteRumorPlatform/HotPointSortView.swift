@@ -94,7 +94,7 @@ struct HotPointSortView: View {
                     .padding(.leading, 20)
                     .sheet(isPresented: $showWebDetail) {
                         ZStack {
-                            WebURLDetailView(url: self.currentData!.url)
+                            WebURLDetail(url: self.currentData!.url)
                             
                             VStack {
                                 HStack {
@@ -115,8 +115,8 @@ struct HotPointSortView: View {
                     }
                 } else {
                     LottieView(filename: "26944-loading-animation")
-                        .frame(width: 200, height: 200)
-                        .offset(y: 50)
+                        .frame(width: 66, height: 66)
+                        .offset(y: 120)
                 }
             }
         }

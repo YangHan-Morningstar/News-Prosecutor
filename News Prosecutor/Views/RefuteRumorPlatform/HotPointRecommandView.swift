@@ -62,14 +62,14 @@ struct HotPointRecommandView: View {
                     }
                 } else {
                     LottieView(filename: "26944-loading-animation")
-                        .frame(width: 200, height: 200)
-                        .offset(y: 50)
+                        .frame(width: 66, height: 66)
+                        .offset(y: 120)
                 }
             }
             .frame(maxWidth: UIScreen.main.bounds.size.width)
             .sheet(isPresented: $showingDetail) {
                 ZStack {
-                    WebURLDetailView(url: self.currentData!.url)
+                    WebURLDetail(url: self.currentData!.url)
                     
                     VStack {
                         HStack {

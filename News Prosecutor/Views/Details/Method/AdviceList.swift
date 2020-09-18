@@ -53,14 +53,14 @@ struct AdviceList: View {
                     }
                 } else {
                     LottieView(filename: "26944-loading-animation")
-                        .frame(width: 200, height: 200)
-                        .offset(y: -50)
+                        .frame(width: 66, height: 66)
+                        .offset(y: 240)
                 }
             }
             .frame(maxWidth: screen.size.width)
             .sheet(isPresented: $showWebDetail) {
                 ZStack {
-                    WebURLDetailView(url: self.currentPost!.url)
+                    WebURLDetail(url: self.currentPost!.url)
                     
                     VStack {
                         HStack {

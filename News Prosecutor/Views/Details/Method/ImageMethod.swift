@@ -45,6 +45,7 @@ struct ImageMethod: View {
 
                     Text("请不要随意上传与新闻无关的图片,\n真实性由应用内置人工智能模型判断，\n仅供参考")
                         .font(.subheadline)
+                        .foregroundColor(.white)
                         .frame(width: 300)
                         .padding(.top, 16)
                         .multilineTextAlignment(.center)
@@ -70,20 +71,47 @@ struct ImageMethod: View {
                 .clipShape(RoundedRectangle(cornerRadius: 30, style: .continuous))
                 .animation(.timingCurve(0.2, 0.8, 0.2, 1, duration: 0.8))
                 
-                Image(uiImage: image ?? UIImage(named: "DefaultImage")!)
-                     .resizable()
-                     .frame(height: 260)
-                     .frame(maxWidth: .infinity)
-                     .cornerRadius(30)
-                     .padding()
-                     .offset(y: 240)
-                     .opacity(showImage ? 1 : 0)
-                     .animation(.easeInOut(duration: 0.8))
+                ZStack(alignment: .topTrailing) {
+                    Image(uiImage: self.image ?? UIImage(named: "DefaultImage")!)
+                        .resizable()
+                    
+                    Button(action: {
+                        self.showImage.toggle()
+                         
+                         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.8) {
+                             self.image = nil
+                         }
+                    }) {
+                        Image(systemName: "xmark")
+                            .padding()
+                            .background(BlurView(style: .systemMaterial))
+                            .clipShape(Circle())
+                            .padding()
+                    }
+                }
+                .frame(height: 260)
+                .frame(maxWidth: .infinity)
+                .cornerRadius(30)
+                .padding()
+                .offset(y: 240)
+                .opacity(showImage ? 1 : 0)
+                .animation(.easeInOut(duration: 0.8))
                 
                 Button(action: {self.showSheet = true}) {
-                    Text("点击此处选择图片")
-                        .opacity(showImage ? 0 : 1)
-                        .animation(.easeInOut(duration: 1.6))
+                    VStack {
+                        ZStack {
+                            RoundedRectangle(cornerRadius: 2)
+                                .frame(width: 30, height: 4)
+                            
+                            RoundedRectangle(cornerRadius: 2)
+                                .frame(width: 4, height: 30)
+                        }
+                        
+                        Text("点击此处选择图片")
+                    }
+                    .foregroundColor(Color("secondary"))
+                    .opacity(showImage ? 0 : 1)
+                    .animation(.easeInOut(duration: 0.8))
                 }
                 .frame(height: 260)
                 .frame(maxWidth: .infinity)
@@ -104,25 +132,6 @@ struct ImageMethod: View {
                         ]
                     )
                 }
-                
-                Button("删除图片") {
-                    
-                    if self.image == nil {
-                        self.showingAlert.toggle()
-                    } else {
-                        self.showImage.toggle()
-                        
-                        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.8) {
-                            self.image = nil
-                        }
-                    }
-                }
-                .padding(12)
-                .padding(.horizontal, 30)
-                .background(Color(#colorLiteral(red: 0, green: 0.7529411765, blue: 1, alpha: 1)))
-                .clipShape(RoundedRectangle(cornerRadius: 20, style: .continuous))
-                .shadow(color: Color(#colorLiteral(red: 0, green: 0.7529411765, blue: 1, alpha: 1)).opacity(0.2), radius: 20, x: 0, y: 20)
-                .offset(y: 550)
                 
                 Button("开始检测") {
                     var booleanResult: Bool
@@ -147,10 +156,11 @@ struct ImageMethod: View {
                 }
                 .padding(12)
                 .padding(.horizontal, 30)
+                .foregroundColor(.white)
                 .background(Color(#colorLiteral(red: 0, green: 0.7529411765, blue: 1, alpha: 1)))
                 .clipShape(RoundedRectangle(cornerRadius: 20, style: .continuous))
                 .shadow(color: Color(#colorLiteral(red: 0, green: 0.7529411765, blue: 1, alpha: 1)).opacity(0.2), radius: 20, x: 0, y: 20)
-                .offset(y: 620)
+                .offset(y: 560)
                 
                 Spacer()
             }

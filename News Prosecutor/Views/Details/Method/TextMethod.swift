@@ -39,6 +39,7 @@ struct TextMethod: View {
 
                 Text("请不要漏写、错写文字与标点符号,\n真实性由应用内置人工智能模型判断，\n仅供参考")
                     .font(.subheadline)
+                    .foregroundColor(.white)
                     .frame(width: 300)
                     .padding(.top, 16)
                     .multilineTextAlignment(.center)
@@ -114,7 +115,7 @@ struct TextMethod: View {
                 self.showingAlert.toggle()
             }) {
                 Text("开始检测")
-                    .foregroundColor(.black)
+                    .foregroundColor(.white)
             }
             .padding(12)
             .padding(.horizontal, 30)
