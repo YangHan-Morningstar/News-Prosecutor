@@ -27,20 +27,13 @@ struct ImageMethod: View {
     
     var body: some View {
         NavigationView {
-            ZStack(alignment: .top) {
-                
-                Color.black.edgesIgnoringSafeArea(.all)
-                
-                Color("background2")
-                    .clipShape(RoundedRectangle(cornerRadius: 30, style: .continuous))
-                    .edgesIgnoringSafeArea(.bottom)
-                
+            VStack {
                 VStack {
                     Text("使用人工智能技术进行检测")
                         .font(.title)
                         .bold()
                         .foregroundColor(.white)
-                        .padding(.top, 100)
+                        .padding(.top, screen.size.height / 15)
                         .multilineTextAlignment(.center)
 
                     Text("请不要随意上传与新闻无关的图片,\n真实性由应用内置人工智能模型判断，\n仅供参考")
@@ -52,87 +45,73 @@ struct ImageMethod: View {
                     
                     Spacer()
                 }
-                .frame(height: 300)
+                .frame(height: screen.size.height / 3)
                 .frame(maxWidth: 600)
-                .background(
-                    Image("h")
-                        .offset(x: -150, y: -200)
-                        .rotationEffect(Angle(degrees: show ? 360*5 : 90))
-                        .animation(Animation.linear(duration: 100*8))
-                        .onAppear { self.show.toggle()}
-                )
-                .background(
-                    Image("l")
-                        .offset(x: -200, y: -250)
-                        .rotationEffect(Angle(degrees: show ? 360*5 : 0), anchor: .bottomLeading)
-                        .animation(Animation.linear(duration: 300*5))
-                )
                 .background(Color("card6"))
                 .clipShape(RoundedRectangle(cornerRadius: 30, style: .continuous))
                 .animation(.timingCurve(0.2, 0.8, 0.2, 1, duration: 0.8))
+                .padding(.bottom, -60)
                 
-                ZStack(alignment: .topTrailing) {
-                    Image(uiImage: self.image ?? UIImage(named: "DefaultImage")!)
-                        .resizable()
-                    
-                    Button(action: {
-                        self.showImage.toggle()
-                         
-                         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.8) {
-                             self.image = nil
-                         }
-                    }) {
-                        Image(systemName: "xmark")
-                            .padding()
-                            .background(BlurView(style: .systemMaterial))
-                            .clipShape(Circle())
-                            .padding()
-                    }
-                }
-                .frame(height: 260)
-                .frame(maxWidth: .infinity)
-                .cornerRadius(30)
-                .padding()
-                .offset(y: 240)
-                .opacity(showImage ? 1 : 0)
-                .animation(.easeInOut(duration: 0.8))
-                
-                Button(action: {self.showSheet = true}) {
-                    VStack {
-                        ZStack {
-                            RoundedRectangle(cornerRadius: 2)
-                                .frame(width: 30, height: 4)
+                ZStack(alignment: .center) {
+                    Button(action: {self.showSheet = true}) {
+                        VStack {
+                            ZStack {
+                                RoundedRectangle(cornerRadius: 2)
+                                    .frame(width: 30, height: 4)
+                                
+                                RoundedRectangle(cornerRadius: 2)
+                                    .frame(width: 4, height: 30)
+                            }
                             
-                            RoundedRectangle(cornerRadius: 2)
-                                .frame(width: 4, height: 30)
+                            Text("点击此处选择图片")
                         }
-                        
-                        Text("点击此处选择图片")
+                        .foregroundColor(Color("secondary"))
+                        .opacity(showImage ? 0 : 1)
                     }
-                    .foregroundColor(Color("secondary"))
-                    .opacity(showImage ? 0 : 1)
+                    .padding(.horizontal)
+                    .actionSheet(isPresented: $showSheet) {
+                        ActionSheet(title: Text("从图库中选择或者使用照相机进行拍摄"), buttons: [
+                            .default(Text("图库")) {
+                                self.showImagePicker = true
+                                self.sourceType = .photoLibrary
+                            },
+                            .default(Text("照相机")) {
+                                self.showImagePicker = true
+                                self.sourceType = .camera
+                            },
+                            .cancel(Text("取消"))
+                            ]
+                        )
+                    }
+
+                    
+                    ZStack(alignment: .topTrailing) {
+                        Image(uiImage: self.image ?? UIImage(named: "DefaultImage")!)
+                            .resizable()
+                            .clipShape(RoundedRectangle(cornerRadius: 30, style: .continuous))
+                        
+                        Button(action: {
+                            self.showImage.toggle()
+                             
+                             DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.8) {
+                                 self.image = nil
+                             }
+                        }) {
+                            Image(systemName: "xmark")
+                                .padding()
+                                .background(BlurView(style: .systemMaterial))
+                                .clipShape(Circle())
+                                .padding()
+                        }
+                    }
+                    .frame(height: 260)
+                    .frame(maxWidth: .infinity)
+                    .cornerRadius(30)
+                    .padding()
+                    .opacity(showImage ? 1 : 0)
                     .animation(.easeInOut(duration: 0.8))
                 }
-                .frame(height: 260)
-                .frame(maxWidth: .infinity)
-                .clipShape(RoundedRectangle(cornerRadius: 30, style: .continuous))
-                .padding(.horizontal)
-                .offset(y: 270)
-                .actionSheet(isPresented: $showSheet) {
-                    ActionSheet(title: Text("从图库中选择或者使用照相机进行拍摄"), buttons: [
-                        .default(Text("图库")) {
-                            self.showImagePicker = true
-                            self.sourceType = .photoLibrary
-                        },
-                        .default(Text("照相机")) {
-                            self.showImagePicker = true
-                            self.sourceType = .camera
-                        },
-                        .cancel(Text("取消"))
-                        ]
-                    )
-                }
-                
+        
                 Button("开始检测") {
                     var booleanResult: Bool
                     
@@ -160,7 +139,6 @@ struct ImageMethod: View {
                 .background(Color(#colorLiteral(red: 0, green: 0.7529411765, blue: 1, alpha: 1)))
                 .clipShape(RoundedRectangle(cornerRadius: 20, style: .continuous))
                 .shadow(color: Color(#colorLiteral(red: 0, green: 0.7529411765, blue: 1, alpha: 1)).opacity(0.2), radius: 20, x: 0, y: 20)
-                .offset(y: 560)
                 
                 Spacer()
             }

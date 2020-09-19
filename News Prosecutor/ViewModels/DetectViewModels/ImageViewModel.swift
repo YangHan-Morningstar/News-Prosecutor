@@ -47,7 +47,6 @@ class ImageViewModel: ObservableObject {
         } catch {
             print(error)
         }
-        
         return result
     }
 }
