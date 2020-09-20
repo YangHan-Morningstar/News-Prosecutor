@@ -69,7 +69,7 @@ struct HotPointRecommandView: View {
             .frame(maxWidth: UIScreen.main.bounds.size.width)
             .sheet(isPresented: $showingDetail) {
                 ZStack {
-                    WebURLDetail(url: self.currentData!.url)
+                    WebURLDetail(currentPost: self.$currentData)
                     
                     VStack {
                         HStack {

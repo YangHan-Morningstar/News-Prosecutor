@@ -60,7 +60,7 @@ struct AdviceList: View {
             .frame(maxWidth: screen.size.width)
             .sheet(isPresented: $showWebDetail) {
                 ZStack {
-                    WebURLDetail(url: self.currentPost!.url)
+                    WebURLDetail(currentPost: self.$currentPost)
                     
                     VStack {
                         HStack {

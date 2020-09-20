@@ -10,16 +10,16 @@ import SwiftUI
 
 struct WebURLDetail: View {
     
-    let url: String
+    @Binding var currentPost: NewsData?
     
     var body: some View {
-        WebView(urlDoDisplay: URL(string: url)!)
+        WebView(urlDoDisplay: URL(string: currentPost!.url)!)
             .edgesIgnoringSafeArea(.all)
     }
 }
 
-struct WebURLDetailView_Previews: PreviewProvider {
-    static var previews: some View {
-        WebURLDetail(url: "https://www.google.com")
-    }
-}
+//struct WebURLDetailView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        WebURLDetail(url: "https://www.google.com")
+//    }
+//}

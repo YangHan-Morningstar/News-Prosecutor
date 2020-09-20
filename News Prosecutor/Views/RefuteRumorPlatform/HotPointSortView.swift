@@ -94,7 +94,7 @@ struct HotPointSortView: View {
                     .padding(.leading, 20)
                     .sheet(isPresented: $showWebDetail) {
                         ZStack {
-                            WebURLDetail(url: self.currentData!.url)
+                            WebURLDetail(currentPost: self.$currentData)
                             
                             VStack {
                                 HStack {

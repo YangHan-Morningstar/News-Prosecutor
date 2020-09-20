@@ -67,7 +67,7 @@ struct WebURLView: View {
         }
         .sheet(isPresented: $showWebDetail) {
             ZStack {
-                WebURLDetail(url: self.currentPost!.url)
+                WebURLDetail(currentPost: self.$currentPost)
                 
                 VStack {
                     HStack {
