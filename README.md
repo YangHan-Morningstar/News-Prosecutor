@@ -8,25 +8,23 @@
 
 ### 2.1 功能介绍
 
-* 文本真实性检测：系统能够对用户输入的新闻文本进行检测，并返回文本的真实性结果。
+* 文本真实性检测：系统能够对用户输入的时政、科学、教育类新闻文本进行检测，并返回文本的真实性结果。
 * 图片真实性检测：系统能够对用户输入的新闻图片进行检测，并返回图片的真实性结果。
 * 知识提供：用户可在其中学习如何辨别虚假新闻。
 * 实战训练： 系统会随机生成题目（包括文本和图片），用户可以进行训练，提高自身辨别能力。
+* 官方辟谣数据实时获取：用户可以同步获取官方辟谣平台的辟谣数据。
 
 ### 2.2 数据介绍
 
 * 图片数据集：网上搜集，训练集30000余张，测试集6800余张。
-* 文本数据集：网上搜集，训练集22000余条，测试集5000余条。
+* 中文文本数据集：网上搜集，训练集70000余条，测试集20000余条。
+* 英文文本数据集：网上搜集，训练集68000余条，测试集19000余条。
+* 官方辟谣数据：源自中国互联网联合辟谣平台的案例分类数据及搜索数据库。
 
 ### 2.3 模型介绍
 
 * 文本检测：基于CreateML机器学习框架中的最大熵模型。
-
-<img width="400" height="250" src="https://github.com/YangHan-Morningstar/News-Prosecutor/blob/master/News%20Prosecutor/Preview%20Content/Preview%20Assets.xcassets/TextModel.imageset/TextModel.png"/>
-
 * 图片检测：基于CreateML机器学习框架中的场景打印特征提取器及图片识别模型。
-
-<img width="400" height="250" src="https://github.com/YangHan-Morningstar/News-Prosecutor/blob/master/News%20Prosecutor/Preview%20Content/Preview%20Assets.xcassets/ImageModel.imageset/ImageModel.png"/>
 
 ### 2.4 其他
 
