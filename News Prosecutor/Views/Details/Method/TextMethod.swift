@@ -132,11 +132,11 @@ struct TextMethod: View {
         .sheet(isPresented: $showingAdvice) {
             ZStack {
                 AdviceList(adviceData: self.textClassifierManager.adviceData)
-                
+
                 VStack {
                     HStack {
                         Spacer()
-                        
+
                         Button(action: { self.showingAdvice.toggle() }) {
                             Image(systemName: "xmark")
                                 .padding()
@@ -144,7 +144,7 @@ struct TextMethod: View {
                                 .clipShape(Circle())
                         }
                     }
-                    
+
                     Spacer()
                 }
                 .padding()

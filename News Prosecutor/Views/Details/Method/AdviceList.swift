@@ -28,27 +28,29 @@ struct AdviceList: View {
                 }
 
                 if !adviceData.list.isEmpty {
-                    ForEach(adviceData.list) { newsDatas in
-                        VStack(alignment: .leading) {
-                            HStack {
-                                Text("辟谣")
-                                    .frame(width: 40, height: 40)
-                                    .background(Color.blue)
-                                    .clipShape(Circle())
-                                    .padding(.leading)
-                                
-                                Button(action: {
-                                    self.showWebDetail.toggle()
-                                    self.currentPost = newsDatas
-                                }) {
-                                    Text(newsDatas.title)
-                                        .foregroundColor(Color("background5"))
+                    VStack(alignment: .leading, spacing: 10) {
+                        ForEach(adviceData.list) { newsDatas in
+                            VStack(alignment: .leading) {
+                                HStack {
+                                    Text("辟谣")
+                                        .frame(width: 40, height: 40)
+                                        .background(Color.blue)
+                                        .clipShape(Circle())
                                         .padding(.leading)
-                                        .padding(.trailing)
+                                    
+                                    Button(action: {
+                                        self.showWebDetail.toggle()
+                                        self.currentPost = newsDatas
+                                    }) {
+                                        Text(newsDatas.title)
+                                            .foregroundColor(Color("background5"))
+                                            .padding(.leading)
+                                            .padding(.trailing)
+                                    }
                                 }
+                                
+                                LabelledDivider(label: newsDatas.time)
                             }
-                            
-                            LabelledDivider(label: newsDatas.time)
                         }
                     }
                 } else {
