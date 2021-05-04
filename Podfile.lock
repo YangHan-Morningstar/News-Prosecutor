@@ -1,27 +1,49 @@
 PODS:
+  - Alamofire (5.4.3)
+  - GRDB.swift (4.14.0):
+    - GRDB.swift/standard (= 4.14.0)
+  - GRDB.swift/standard (4.14.0)
+  - LeanCloud (17.8.0):
+    - LeanCloud/RTM (= 17.8.0)
+  - LeanCloud/Foundation (17.8.0):
+    - Alamofire (~> 5.4)
+  - LeanCloud/RTM (17.8.0):
+    - GRDB.swift (~> 4.14)
+    - LeanCloud/Foundation (= 17.8.0)
+    - SwiftProtobuf (~> 1.15)
   - lottie-ios (3.2.1)
   - SDWebImage (5.11.1):
     - SDWebImage/Core (= 5.11.1)
   - SDWebImage/Core (5.11.1)
   - SDWebImageSwiftUI (2.0.2):
     - SDWebImage (~> 5.10)
+  - SwiftProtobuf (1.16.0)
 
 DEPENDENCIES:
+  - LeanCloud
   - lottie-ios
   - SDWebImage
   - SDWebImageSwiftUI
 
 SPEC REPOS:
   trunk:
+    - Alamofire
+    - GRDB.swift
+    - LeanCloud
     - lottie-ios
     - SDWebImage
     - SDWebImageSwiftUI
+    - SwiftProtobuf
 
 SPEC CHECKSUMS:
+  Alamofire: e447a2774a40c996748296fa2c55112fdbbc42f9
+  GRDB.swift: 8cc3ab7c8b8b4ac1761deb8dca4b51c1c9d429f8
+  LeanCloud: ff95ea8076a30e10358542ecaa53e87c4308c8bd
   lottie-ios: 106e92eaf11fbed0a76590b4cdb9b5ec26123ff7
   SDWebImage: a7f831e1a65eb5e285e3fb046a23fcfbf08e696d
   SDWebImageSwiftUI: 8a3923c95108312b03a599ec1498754af55a6819
+  SwiftProtobuf: 4e16842b83c6fda06b10fac50d73b3f1fce8ab7b
 
-PODFILE CHECKSUM: df983438e74857abd8c406a9642577d2c165c054
+PODFILE CHECKSUM: 9889e81b077f1035249f858ac07cf9c81d584c5b
 
 COCOAPODS: 1.10.1

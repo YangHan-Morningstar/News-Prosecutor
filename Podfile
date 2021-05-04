@@ -9,5 +9,8 @@ target 'News Prosecutor' do
 	pod 'lottie-ios'
 	pod 'SDWebImage'
 	pod 'SDWebImageSwiftUI'
+	pod 'LeanCloud'
+
+
 
 end
