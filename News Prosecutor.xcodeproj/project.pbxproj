@@ -8,6 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		1A892608009C23FBD403C392 /* Pods_News_Prosecutor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76A98ECE4F3B8353524A8A73 /* Pods_News_Prosecutor.framework */; };
+		4161B3BB2640E62C0045CDEE /* HomeTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4161B3BA2640E62C0045CDEE /* HomeTabView.swift */; };
+		4161B3C02640E6710045CDEE /* CheckPhoneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4161B3BE2640E6710045CDEE /* CheckPhoneView.swift */; };
+		4161B3C12640E6710045CDEE /* PersonTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4161B3BF2640E6710045CDEE /* PersonTabView.swift */; };
+		4161B3D12640E6A70045CDEE /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4161B3CD2640E6A70045CDEE /* LoginView.swift */; };
+		4161B3D22640E6A70045CDEE /* ResetPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4161B3CE2640E6A70045CDEE /* ResetPasswordView.swift */; };
+		4161B3D32640E6A70045CDEE /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4161B3CF2640E6A70045CDEE /* WelcomeView.swift */; };
+		4161B3D42640E6A70045CDEE /* SignupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4161B3D02640E6A70045CDEE /* SignupView.swift */; };
+		4161B3D82640E6D00045CDEE /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4161B3D72640E6D00045CDEE /* LoadingView.swift */; };
+		4161B3DB2640E7030045CDEE /* SwiftUILoginPageWithLeanCloudApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4161B3DA2640E7030045CDEE /* SwiftUILoginPageWithLeanCloudApp.swift */; };
+		4161B3DE2640E7200045CDEE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4161B3DD2640E7200045CDEE /* ContentView.swift */; };
 		EA206A8325091E9E00C10055 /* FakeNewsClassifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = EA206A8225091E9E00C10055 /* FakeNewsClassifier.mlmodel */; };
 		EA27B7B024B2161D007EF44F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA27B7AF24B2161D007EF44F /* AppDelegate.swift */; };
 		EA27B7B224B2161D007EF44F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA27B7B124B2161D007EF44F /* SceneDelegate.swift */; };
@@ -69,6 +79,16 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4161B3BA2640E62C0045CDEE /* HomeTabView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTabView.swift; sourceTree = "<group>"; };
+		4161B3BE2640E6710045CDEE /* CheckPhoneView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckPhoneView.swift; sourceTree = "<group>"; };
+		4161B3BF2640E6710045CDEE /* PersonTabView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonTabView.swift; sourceTree = "<group>"; };
+		4161B3CD2640E6A70045CDEE /* LoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		4161B3CE2640E6A70045CDEE /* ResetPasswordView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResetPasswordView.swift; sourceTree = "<group>"; };
+		4161B3CF2640E6A70045CDEE /* WelcomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
+		4161B3D02640E6A70045CDEE /* SignupView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupView.swift; sourceTree = "<group>"; };
+		4161B3D72640E6D00045CDEE /* LoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		4161B3DA2640E7030045CDEE /* SwiftUILoginPageWithLeanCloudApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftUILoginPageWithLeanCloudApp.swift; sourceTree = "<group>"; };
+		4161B3DD2640E7200045CDEE /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		76A98ECE4F3B8353524A8A73 /* Pods_News_Prosecutor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_News_Prosecutor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9618144DD69B7C81B48DDFBD /* Pods-News Prosecutor.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-News Prosecutor.release.xcconfig"; path = "Target Support Files/Pods-News Prosecutor/Pods-News Prosecutor.release.xcconfig"; sourceTree = "<group>"; };
 		A4ADF9E66E1913E6F0671377 /* Pods-News Prosecutor.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-News Prosecutor.debug.xcconfig"; path = "Target Support Files/Pods-News Prosecutor/Pods-News Prosecutor.debug.xcconfig"; sourceTree = "<group>"; };
@@ -155,6 +175,42 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		4161B3B92640E62C0045CDEE /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				4161B3BA2640E62C0045CDEE /* HomeTabView.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		4161B3BD2640E6710045CDEE /* Person */ = {
+			isa = PBXGroup;
+			children = (
+				4161B3BE2640E6710045CDEE /* CheckPhoneView.swift */,
+				4161B3BF2640E6710045CDEE /* PersonTabView.swift */,
+			);
+			path = Person;
+			sourceTree = "<group>";
+		};
+		4161B3CC2640E6A70045CDEE /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				4161B3CD2640E6A70045CDEE /* LoginView.swift */,
+				4161B3CE2640E6A70045CDEE /* ResetPasswordView.swift */,
+				4161B3CF2640E6A70045CDEE /* WelcomeView.swift */,
+				4161B3D02640E6A70045CDEE /* SignupView.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		4161B3D62640E6D00045CDEE /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				4161B3D72640E6D00045CDEE /* LoadingView.swift */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
 		ACDACB5A3B955D65195F851F /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -185,6 +241,12 @@
 		EA27B7AE24B2161D007EF44F /* News Prosecutor */ = {
 			isa = PBXGroup;
 			children = (
+				4161B3DA2640E7030045CDEE /* SwiftUILoginPageWithLeanCloudApp.swift */,
+				4161B3DD2640E7200045CDEE /* ContentView.swift */,
+				4161B3D62640E6D00045CDEE /* Util */,
+				4161B3CC2640E6A70045CDEE /* Login */,
+				4161B3BD2640E6710045CDEE /* Person */,
+				4161B3B92640E62C0045CDEE /* Home */,
 				EADBDAA424BAA0A5009A81E8 /* Utils */,
 				EA27B7CB24B218BB007EF44F /* Services */,
 				EA27B7CA24B218AC007EF44F /* ViewModels */,
@@ -659,11 +721,15 @@
 				EA45D356251707640059B0BF /* EnglishFakeNewsTextClassifier.mlmodel in Sources */,
 				EA27B7B224B2161D007EF44F /* SceneDelegate.swift in Sources */,
 				EA27B7DD24B21B47007EF44F /* Modifier.swift in Sources */,
+				4161B3BB2640E62C0045CDEE /* HomeTabView.swift in Sources */,
 				EADBDA9E24B81163009A81E8 /* CharacterLimitTextField.swift in Sources */,
+				4161B3DE2640E7200045CDEE /* ContentView.swift in Sources */,
 				EA27B85F24B6EDC7007EF44F /* DetectRingView.swift in Sources */,
+				4161B3D42640E6A70045CDEE /* SignupView.swift in Sources */,
 				EA27B7E824B21EA7007EF44F /* ImageViewModel.swift in Sources */,
 				EAE0E67D24CBD6B60021629B /* WebURLDetail.swift in Sources */,
 				EAE0E68124CBD7A00021629B /* TabBarView.swift in Sources */,
+				4161B3D22640E6A70045CDEE /* ResetPasswordView.swift in Sources */,
 				EA5D67B324D9632500439F8D /* LabelDivider.swift in Sources */,
 				EA27B7FF24B2C768007EF44F /* Testing.swift in Sources */,
 				EA27B7F724B2C47D007EF44F /* Question.swift in Sources */,
@@ -672,11 +738,14 @@
 				EA27B86324B75F36007EF44F /* CustomTextField.swift in Sources */,
 				EAE0E68724CBD9F60021629B /* EachCaseListContent.swift in Sources */,
 				EA27B7F924B2C67A007EF44F /* QuestionSet.swift in Sources */,
+				4161B3C02640E6710045CDEE /* CheckPhoneView.swift in Sources */,
 				EA27B7FB24B2C6C9007EF44F /* QuestionViewModel.swift in Sources */,
 				EA27B7F324B222F2007EF44F /* TextMethod.swift in Sources */,
 				EAE0E5D324C493810021629B /* CustomProgressView.swift in Sources */,
+				4161B3C12640E6710045CDEE /* PersonTabView.swift in Sources */,
 				EAD52CB124E0F30F00A1B6D5 /* AdviceList.swift in Sources */,
 				EA27B7FD24B2C709007EF44F /* AnswerButton.swift in Sources */,
+				4161B3D32640E6A70045CDEE /* WelcomeView.swift in Sources */,
 				EAD52CAD24E0EB0500A1B6D5 /* Advice.swift in Sources */,
 				EA27B85A24B5D7BD007EF44F /* DetectResultDetailModel.swift in Sources */,
 				EA5D67AB24D949AD00439F8D /* NewsData.swift in Sources */,
@@ -686,9 +755,12 @@
 				EA27B7B524B2161D007EF44F /* News_Prosecutor.xcdatamodeld in Sources */,
 				EA27B85824B5C233007EF44F /* DetectResultDetailDataManager.swift in Sources */,
 				EAE0E5DF24C5165C0021629B /* LottieView.swift in Sources */,
+				4161B3DB2640E7030045CDEE /* SwiftUILoginPageWithLeanCloudApp.swift in Sources */,
+				4161B3D82640E6D00045CDEE /* LoadingView.swift in Sources */,
 				EAD52CAF24E0EB5F00A1B6D5 /* SearchedAdvice.swift in Sources */,
 				EAE0E67B24CBD5C10021629B /* WebView.swift in Sources */,
 				EA5D67A924D9499500439F8D /* CaseClassification.swift in Sources */,
+				4161B3D12640E6A70045CDEE /* LoginView.swift in Sources */,
 				EA27B7D724B219FF007EF44F /* MethodView.swift in Sources */,
 				EA27B7EF24B22218007EF44F /* Tips.swift in Sources */,
 			);
