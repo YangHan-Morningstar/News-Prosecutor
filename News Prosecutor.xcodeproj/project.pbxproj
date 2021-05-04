@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A892608009C23FBD403C392 /* Pods_News_Prosecutor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76A98ECE4F3B8353524A8A73 /* Pods_News_Prosecutor.framework */; };
 		EA206A8325091E9E00C10055 /* FakeNewsClassifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = EA206A8225091E9E00C10055 /* FakeNewsClassifier.mlmodel */; };
 		EA27B7B024B2161D007EF44F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA27B7AF24B2161D007EF44F /* AppDelegate.swift */; };
 		EA27B7B224B2161D007EF44F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA27B7B124B2161D007EF44F /* SceneDelegate.swift */; };
@@ -51,13 +52,10 @@
 		EAD52CB124E0F30F00A1B6D5 /* AdviceList.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD52CB024E0F30F00A1B6D5 /* AdviceList.swift */; };
 		EAD52CBC24E3C0AE00A1B6D5 /* HotPointDataViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD52CBB24E3C0AE00A1B6D5 /* HotPointDataViewModel.swift */; };
 		EAD52CBF24E3C1FA00A1B6D5 /* HotPointRecommandView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD52CBE24E3C1FA00A1B6D5 /* HotPointRecommandView.swift */; };
-		EAD52CC224E3C2F900A1B6D5 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = EAD52CC124E3C2F900A1B6D5 /* SDWebImageSwiftUI */; };
 		EAD52CC824E65FD900A1B6D5 /* HotPointSortView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD52CC724E65FD900A1B6D5 /* HotPointSortView.swift */; };
 		EADBDA9E24B81163009A81E8 /* CharacterLimitTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = EADBDA9D24B81163009A81E8 /* CharacterLimitTextField.swift */; };
-		EADBDAA324B94C56009A81E8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EADBDAA124B94C56009A81E8 /* LaunchScreen.storyboard */; };
 		EADBDAA924BAA18D009A81E8 /* DismissKeyboardHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EADBDAA824BAA18D009A81E8 /* DismissKeyboardHelper.swift */; };
 		EAE0E5D324C493810021629B /* CustomProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE0E5D224C493810021629B /* CustomProgressView.swift */; };
-		EAE0E5D624C4A98C0021629B /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = EAE0E5D524C4A98C0021629B /* Lottie */; };
 		EAE0E5DB24C515C80021629B /* 14651-error-animation.json in Resources */ = {isa = PBXBuildFile; fileRef = EAE0E5D924C515C80021629B /* 14651-error-animation.json */; };
 		EAE0E5DC24C515C80021629B /* 433-checked-done.json in Resources */ = {isa = PBXBuildFile; fileRef = EAE0E5DA24C515C80021629B /* 433-checked-done.json */; };
 		EAE0E5DF24C5165C0021629B /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE0E5DE24C5165C0021629B /* LottieView.swift */; };
@@ -71,6 +69,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		76A98ECE4F3B8353524A8A73 /* Pods_News_Prosecutor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_News_Prosecutor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9618144DD69B7C81B48DDFBD /* Pods-News Prosecutor.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-News Prosecutor.release.xcconfig"; path = "Target Support Files/Pods-News Prosecutor/Pods-News Prosecutor.release.xcconfig"; sourceTree = "<group>"; };
+		A4ADF9E66E1913E6F0671377 /* Pods-News Prosecutor.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-News Prosecutor.debug.xcconfig"; path = "Target Support Files/Pods-News Prosecutor/Pods-News Prosecutor.debug.xcconfig"; sourceTree = "<group>"; };
 		EA206A8225091E9E00C10055 /* FakeNewsClassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = FakeNewsClassifier.mlmodel; sourceTree = "<group>"; };
 		EA27B7AC24B2161D007EF44F /* News Prosecutor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "News Prosecutor.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA27B7AF24B2161D007EF44F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -139,19 +140,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EAD52CC224E3C2F900A1B6D5 /* SDWebImageSwiftUI in Frameworks */,
-				EAE0E5D624C4A98C0021629B /* Lottie in Frameworks */,
+				1A892608009C23FBD403C392 /* Pods_News_Prosecutor.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		09A9E8955A5FF26BD91B0388 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				76A98ECE4F3B8353524A8A73 /* Pods_News_Prosecutor.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		ACDACB5A3B955D65195F851F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A4ADF9E66E1913E6F0671377 /* Pods-News Prosecutor.debug.xcconfig */,
+				9618144DD69B7C81B48DDFBD /* Pods-News Prosecutor.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		EA27B7A324B2161D007EF44F = {
 			isa = PBXGroup;
 			children = (
 				EA27B7AE24B2161D007EF44F /* News Prosecutor */,
 				EA27B7AD24B2161D007EF44F /* Products */,
+				ACDACB5A3B955D65195F851F /* Pods */,
+				09A9E8955A5FF26BD91B0388 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -509,19 +528,17 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EA27B7C324B2161E007EF44F /* Build configuration list for PBXNativeTarget "News Prosecutor" */;
 			buildPhases = (
+				F9FA47F2D4F3403F1314D848 /* [CP] Check Pods Manifest.lock */,
 				EA27B7A824B2161D007EF44F /* Sources */,
 				EA27B7A924B2161D007EF44F /* Frameworks */,
 				EA27B7AA24B2161D007EF44F /* Resources */,
+				56E9ACDE9A4A34237118311D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = "News Prosecutor";
-			packageProductDependencies = (
-				EAE0E5D524C4A98C0021629B /* Lottie */,
-				EAD52CC124E3C2F900A1B6D5 /* SDWebImageSwiftUI */,
-			);
 			productName = "News Prosecutor";
 			productReference = EA27B7AC24B2161D007EF44F /* News Prosecutor.app */;
 			productType = "com.apple.product-type.application";
@@ -550,10 +567,6 @@
 				Base,
 			);
 			mainGroup = EA27B7A324B2161D007EF44F;
-			packageReferences = (
-				EAE0E5D424C4A98C0021629B /* XCRemoteSwiftPackageReference "lottie-ios" */,
-				EAD52CC024E3C2F800A1B6D5 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
-			);
 			productRefGroup = EA27B7AD24B2161D007EF44F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -568,7 +581,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EADBDAA324B94C56009A81E8 /* LaunchScreen.storyboard in Resources */,
 				EA27B7BC24B2161E007EF44F /* Preview Assets.xcassets in Resources */,
 				EA27B7B924B2161E007EF44F /* Assets.xcassets in Resources */,
 				EAD52CA124DFD26300A1B6D5 /* 26944-loading-animation.json in Resources */,
@@ -578,6 +590,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		56E9ACDE9A4A34237118311D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-News Prosecutor/Pods-News Prosecutor-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-News Prosecutor/Pods-News Prosecutor-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-News Prosecutor/Pods-News Prosecutor-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F9FA47F2D4F3403F1314D848 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-News Prosecutor-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		EA27B7A824B2161D007EF44F /* Sources */ = {
@@ -705,7 +759,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -760,7 +814,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -772,18 +826,19 @@
 		};
 		EA27B7C424B2161E007EF44F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A4ADF9E66E1913E6F0671377 /* Pods-News Prosecutor.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"News Prosecutor/Preview Content\"";
-				DEVELOPMENT_TEAM = NZUV26978H;
+				DEVELOPMENT_TEAM = TS394A4PJX;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "News Prosecutor/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.yanghan.News-Prosecutor";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.lsc.News-Prosecutor";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -792,18 +847,19 @@
 		};
 		EA27B7C524B2161E007EF44F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9618144DD69B7C81B48DDFBD /* Pods-News Prosecutor.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"News Prosecutor/Preview Content\"";
-				DEVELOPMENT_TEAM = NZUV26978H;
+				DEVELOPMENT_TEAM = TS394A4PJX;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "News Prosecutor/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.yanghan.News-Prosecutor";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.lsc.News-Prosecutor";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -832,38 +888,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		EAD52CC024E3C2F800A1B6D5 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.5.0;
-			};
-		};
-		EAE0E5D424C4A98C0021629B /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/airbnb/lottie-ios.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 3.1.8;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		EAD52CC124E3C2F900A1B6D5 /* SDWebImageSwiftUI */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = EAD52CC024E3C2F800A1B6D5 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
-			productName = SDWebImageSwiftUI;
-		};
-		EAE0E5D524C4A98C0021629B /* Lottie */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = EAE0E5D424C4A98C0021629B /* XCRemoteSwiftPackageReference "lottie-ios" */;
-			productName = Lottie;
-		};
-/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		EA27B7B324B2161D007EF44F /* News_Prosecutor.xcdatamodeld */ = {
